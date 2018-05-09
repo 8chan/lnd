@@ -401,6 +401,7 @@ func newChainControlFromConfig(cfg *config, chanDB *channeldb.DB,
 			}
 			if err := cc.feeEstimator.Start(); err != nil {
 				return nil, nil, err
+			}
 		} else if cfg.Monacoin.Active {
 			ltndLog.Infof("Initializing monacoind backed fee estimator")
 

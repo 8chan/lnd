@@ -56,6 +56,13 @@ const (
 	minLtcRemoteDelay uint16 = 576
 	maxLtcRemoteDelay uint16 = 8064
 
+	// minMonaRemoteDelay and maxMonaRemoteDelay is the extremes of the
+	// Monacoin CSV delay we will require the remote to use for its
+	// commitment transaction. The actual delay we will require will be
+	// somewhere between these values, depending on channel size.
+	minMonaRemoteDelay uint16 = 960
+	maxMonaRemoteDelay uint16 = 13440
+
 	// maxWaitNumBlocksFundingConf is the maximum number of blocks to wait
 	// for the funding transaction to be confirmed before forgetting about
 	// the channel. 288 blocks is ~48 hrs

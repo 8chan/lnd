@@ -188,7 +188,7 @@ func applyMonacoinParams(params *bitcoinNetParams, monacoinParams *monacoinNetPa
 // parameter configuration.
 func isTestnet(params *bitcoinNetParams) bool {
 	switch params.Params.Net {
-	case bitcoinWire.TestNet3, bitcoinWire.BitcoinNet(litecoinWire.TestNet4):
+	case bitcoinWire.TestNet3, bitcoinWire.BitcoinNet(litecoinWire.TestNet4), bitcoinWire.BitcoinNet(monacoinWire.TestNet4):
 		return true
 	default:
 		return false
