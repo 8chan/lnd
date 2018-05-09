@@ -43,8 +43,8 @@
   revision = "36d9a509ff4ea1e916a73c6f1c2b784c1faf11ed"
 
 [[constraint]]
-  name = "github.com/lightningnetwork/lightning-onion"
-  revision = "c86137582e53fe3ba26681a98f911b546970893e"
+  name = "github.com/wakiyamap/lightning-onion"
+  revision = "4efbde631b9d74cbc687068c2c7fc364da215087"
 
 [[constraint]]
   name = "github.com/ltcsuite/ltcd"

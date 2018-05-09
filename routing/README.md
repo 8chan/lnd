@@ -13,5 +13,5 @@ channel graph state.
 ## Installation and Updating
 
 ```bash
-$ go get -u github.com/lightningnetwork/lnd/routing
+$ go get -u github.com/wakiyamap/lnd/routing
 ```

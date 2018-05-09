@@ -50,7 +50,7 @@ $ mv docs/go-fuzz/wirefuzz.go lnwire/<folder name here>
 * Change the package name in `wirefuzz.go` from `wirefuzz` to `<folder name here>`.
 * Build the test program - this produces a `<folder name here>-fuzz.zip` (archive) file.
 ```
-$ go-fuzz-build github.com/lightningnetwork/lnd/lnwire/<folder name here>
+$ go-fuzz-build github.com/wakiyamap/lnd/lnwire/<folder name here>
 ```
 * Now, run `go-fuzz`!!!
 ```

@@ -441,7 +441,7 @@ keep a clean commit history over a tangled weave of merge commits.  However,
 regardless of the specific merge method used, the code will be integrated with
 the master branch and the pull request will be closed.
 
-Rejoice as you will now be listed as a [contributor](https://github.com/lightningnetwork/lnd/graphs/contributors)!
+Rejoice as you will now be listed as a [contributor](https://github.com/wakiyamap/lnd/graphs/contributors)!
 
 <a name="Standards" />
 
@@ -474,7 +474,7 @@ Rejoice as you will now be listed as a [contributor](https://github.com/lightnin
 #### 6.2. Licensing of Contributions
 ****
 All contributions must be licensed with the
-[MIT license](https://github.com/lightningnetwork/lnd/blob/master/LICENSE).  This is
+[MIT license](https://github.com/wakiyamap/lnd/blob/master/LICENSE).  This is
 the same license as all of the code found within lnd.
 
 

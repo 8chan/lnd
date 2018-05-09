@@ -130,7 +130,7 @@ description):
 ## Installation and Updating
 
 ```bash
-$ go get -u github.com/lightningnetwork/lnd/lnrpc
+$ go get -u github.com/wakiyamap/lnd/lnrpc
 ```
 
 ## Generate protobuf definitions
@@ -160,4 +160,4 @@ $ git reset --hard f2862b476edcef83412c7af8687c9cd8e4097c0f
 $ go install ./protoc-gen-grpc-gateway ./protoc-gen-swagger
 ```
 
-4. Run [`gen_protos.sh`](https://github.com/lightningnetwork/lnd/blob/master/lnrpc/gen_protos.sh) to generate new protobuf definitions.
+4. Run [`gen_protos.sh`](https://github.com/wakiyamap/lnd/blob/master/lnrpc/gen_protos.sh) to generate new protobuf definitions.

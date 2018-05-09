@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/lightningnetwork/lnd/keychain"
+	"github.com/wakiyamap/lnd/keychain"
 	litecoinCfg "github.com/ltcsuite/ltcd/chaincfg"
 	litecoinWire "github.com/ltcsuite/ltcd/wire"
 	monacoinCfg "github.com/wakiyamap/monad/chaincfg"

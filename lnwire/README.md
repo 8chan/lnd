@@ -14,5 +14,5 @@ protocol level.
 ## Installation and Updating
 
 ```bash
-$ go get -u github.com/lightningnetwork/lnd/lnwire
+$ go get -u github.com/wakiyamap/lnd/lnwire
 ```

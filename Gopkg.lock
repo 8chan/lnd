@@ -173,44 +173,6 @@
   revision = "36d9a509ff4ea1e916a73c6f1c2b784c1faf11ed"
 
 [[projects]]
-  name = "github.com/lightningnetwork/lightning-onion"
-  packages = ["."]
-  revision = "c86137582e53fe3ba26681a98f911b546970893e"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/lightningnetwork/lnd"
-  packages = [
-    "aezeed",
-    "autopilot",
-    "brontide",
-    "chainntnfs",
-    "chainntnfs/bitcoindnotify",
-    "chainntnfs/btcdnotify",
-    "chainntnfs/neutrinonotify",
-    "channeldb",
-    "contractcourt",
-    "discovery",
-    "htlcswitch",
-    "htlcswitch/hodl",
-    "keychain",
-    "lnrpc",
-    "lntest",
-    "lnwallet",
-    "lnwallet/btcwallet",
-    "lnwire",
-    "macaroons",
-    "multimutex",
-    "routing",
-    "routing/chainview",
-    "shachain",
-    "torsvc",
-    "walletunlocker",
-    "zpay32"
-  ]
-  revision = "27ca61aedf038e0df7a6f6cd9f7d35bc5e2013d0"
-
-[[projects]]
   name = "github.com/ltcsuite/ltcd"
   packages = [
     "btcjson",
@@ -296,6 +258,11 @@
   name = "github.com/urfave/cli"
   packages = ["."]
   revision = "1efa31f08b9333f1bd4882d61f9d668a70cd902e"
+
+[[projects]]
+  name = "github.com/wakiyamap/lightning-onion"
+  packages = ["."]
+  revision = "4efbde631b9d74cbc687068c2c7fc364da215087"
 
 [[projects]]
   branch = "master"
@@ -429,6 +396,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "59d6dda6a81736a9ccb5ee2d16217e03efa14a1501757b2173279ccd9d125c19"
+  inputs-digest = "b8c31a1554ea3e392f94a69b0775d2f62d6614d0b462419309514d53d526e483"
   solver-name = "gps-cdcl"
   solver-version = 1

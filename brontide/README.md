@@ -24,5 +24,5 @@ between network enabled programs.
 ## Installation and Updating
 
 ```bash
-$ go get -u github.com/lightningnetwork/lnd/brontide
+$ go get -u github.com/wakiyamap/lnd/brontide
 ```
