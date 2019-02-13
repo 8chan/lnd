@@ -4,7 +4,7 @@ import (
 	"encoding/binary"
 	"io"
 
-	"github.com/btcsuite/btcd/btcec"
+	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/lightning-onion"
 	"github.com/wakiyamap/lnd/lnwire"
 )

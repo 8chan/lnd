@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/btcsuite/btcd/btcec"
-	"github.com/btcsuite/btcd/wire"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/wire"
 	"github.com/coreos/bbolt"
 	"github.com/go-errors/errors"
 	"github.com/wakiyamap/lnd/lnwire"

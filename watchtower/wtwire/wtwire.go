@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/btcsuite/btcd/btcec"
-	"github.com/btcsuite/btcd/wire"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/lnd/lnwallet"
 	"github.com/wakiyamap/lnd/watchtower/blob"
 )

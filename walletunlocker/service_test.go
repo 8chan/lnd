@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/btcsuite/btcd/chaincfg"
+	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/btcsuite/btcwallet/wallet"
 	"github.com/wakiyamap/lnd/aezeed"
 	"github.com/wakiyamap/lnd/keychain"

@@ -4,7 +4,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/btcsuite/btcd/chaincfg"
+	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/lnrpc"
 	"github.com/wakiyamap/lnd/routing"

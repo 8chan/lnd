@@ -3,7 +3,7 @@
 package invoicesrpc
 
 import (
-	"github.com/btcsuite/btcd/chaincfg"
+	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/lnd/invoices"
 	"github.com/wakiyamap/lnd/macaroons"
 )

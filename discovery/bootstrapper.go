@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/btcsuite/btcd/btcec"
+	"github.com/wakiyamap/monad/btcec"
 	"github.com/btcsuite/btcutil/bech32"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/miekg/dns"

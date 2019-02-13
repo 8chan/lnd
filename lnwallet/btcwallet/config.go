@@ -4,8 +4,8 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/btcsuite/btcd/wire"
+	"github.com/wakiyamap/monad/chaincfg"
+	"github.com/wakiyamap/monad/wire"
 	"github.com/btcsuite/btcutil"
 	"github.com/wakiyamap/lnd/lnwallet"
 

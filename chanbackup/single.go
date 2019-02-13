@@ -6,9 +6,9 @@ import (
 	"io"
 	"net"
 
-	"github.com/btcsuite/btcd/btcec"
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/btcsuite/btcd/wire"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/keychain"
 	"github.com/wakiyamap/lnd/lnwire"

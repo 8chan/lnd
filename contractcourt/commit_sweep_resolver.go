@@ -7,7 +7,7 @@ import (
 
 	"github.com/wakiyamap/lnd/input"
 
-	"github.com/btcsuite/btcd/wire"
+	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/lnd/lnwallet"
 )
 

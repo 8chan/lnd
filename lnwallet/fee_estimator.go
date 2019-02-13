@@ -3,8 +3,8 @@ package lnwallet
 import (
 	"encoding/json"
 
-	"github.com/btcsuite/btcd/blockchain"
-	"github.com/btcsuite/btcd/rpcclient"
+	"github.com/wakiyamap/monad/blockchain"
+	"github.com/wakiyamap/monad/rpcclient"
 	"github.com/btcsuite/btcutil"
 )
 

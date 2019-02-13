@@ -16,7 +16,7 @@ import (
 	"sync"
 	"syscall"
 
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/golang/protobuf/jsonpb"
 	"github.com/golang/protobuf/proto"
 	"github.com/urfave/cli"

@@ -6,8 +6,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/btcsuite/btcd/btcec"
-	bitcoinCfg "github.com/btcsuite/btcd/chaincfg"
+	"github.com/wakiyamap/monad/btcec"
+	bitcoinCfg "github.com/wakiyamap/monad/chaincfg"
 	"github.com/btcsuite/btcutil"
 	"github.com/wakiyamap/lightning-onion"
 	"github.com/wakiyamap/lnd/channeldb"

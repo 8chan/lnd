@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/btcsuite/btcd/btcec"
+	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/lnd/keychain"
 )
 

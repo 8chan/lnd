@@ -3,7 +3,7 @@ package chanbackup
 import (
 	"net"
 
-	"github.com/btcsuite/btcd/btcec"
+	"github.com/wakiyamap/monad/btcec"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/keychain"
 )

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/btcsuite/btcd/chaincfg"
+	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/lnd/autopilot"
 	"github.com/wakiyamap/lnd/invoices"
 	"github.com/wakiyamap/lnd/lnrpc/autopilotrpc"

@@ -1,7 +1,7 @@
 package lnwallet
 
 import (
-	"github.com/btcsuite/btcd/chaincfg"
+	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/lnd/chainntnfs"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/input"

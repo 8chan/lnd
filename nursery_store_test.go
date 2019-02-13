@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/btcsuite/btcd/wire"
+	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/lnd/channeldb"
 )
 

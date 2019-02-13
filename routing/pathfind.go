@@ -8,7 +8,7 @@ import (
 
 	"container/heap"
 
-	"github.com/btcsuite/btcd/btcec"
+	"github.com/wakiyamap/monad/btcec"
 	"github.com/coreos/bbolt"
 
 	"github.com/wakiyamap/lightning-onion"

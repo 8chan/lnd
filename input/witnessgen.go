@@ -3,8 +3,8 @@ package input
 import (
 	"fmt"
 
-	"github.com/btcsuite/btcd/txscript"
-	"github.com/btcsuite/btcd/wire"
+	"github.com/wakiyamap/monad/txscript"
+	"github.com/wakiyamap/monad/wire"
 )
 
 // WitnessType determines how an output's witness will be generated. The

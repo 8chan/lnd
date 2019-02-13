@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/btcsuite/btcutil"
 	"github.com/wakiyamap/lnd/lnwire"
 )

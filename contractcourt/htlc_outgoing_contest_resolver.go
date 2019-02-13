@@ -5,7 +5,7 @@ import (
 	"github.com/wakiyamap/lnd/input"
 	"io"
 
-	"github.com/btcsuite/btcd/wire"
+	"github.com/wakiyamap/monad/wire"
 	"github.com/btcsuite/btcutil"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/chainntnfs"
