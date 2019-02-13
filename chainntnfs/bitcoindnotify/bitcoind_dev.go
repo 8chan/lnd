@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
-	"github.com/btcsuite/btcwallet/chain"
+	"github.com/wakiyamap/monawallet/chain"
 	"github.com/wakiyamap/lnd/chainntnfs"
 )
 

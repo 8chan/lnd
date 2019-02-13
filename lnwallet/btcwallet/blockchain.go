@@ -9,8 +9,8 @@ import (
 	"github.com/wakiyamap/monad/wire"
 	"github.com/btcsuite/btcutil"
 
-	"github.com/btcsuite/btcwallet/chain"
-	"github.com/btcsuite/btcwallet/waddrmgr"
+	"github.com/wakiyamap/monawallet/chain"
+	"github.com/wakiyamap/monawallet/waddrmgr"
 	"github.com/wakiyamap/neutrino"
 	"github.com/wakiyamap/lnd/lnwallet"
 )

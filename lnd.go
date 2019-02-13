@@ -34,7 +34,7 @@ import (
 	"google.golang.org/grpc/credentials"
 
 	"github.com/wakiyamap/monad/btcec"
-	"github.com/btcsuite/btcwallet/wallet"
+	"github.com/wakiyamap/monawallet/wallet"
 	proxy "github.com/grpc-ecosystem/grpc-gateway/runtime"
 	flags "github.com/jessevdk/go-flags"
 

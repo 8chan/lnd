@@ -11,12 +11,12 @@ import (
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
-	"github.com/btcsuite/btcwallet/waddrmgr"
-	"github.com/btcsuite/btcwallet/wallet"
-	"github.com/btcsuite/btcwallet/walletdb"
+	"github.com/wakiyamap/monawallet/waddrmgr"
+	"github.com/wakiyamap/monawallet/wallet"
+	"github.com/wakiyamap/monawallet/walletdb"
 	"github.com/davecgh/go-spew/spew"
 
-	_ "github.com/btcsuite/btcwallet/walletdb/bdb" // Required in order to create the default database.
+	_ "github.com/wakiyamap/monawallet/walletdb/bdb" // Required in order to create the default database.
 )
 
 // versionZeroKeyFamilies is a slice of all the known key families for first

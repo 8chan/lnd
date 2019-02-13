@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/wakiyamap/monad/chaincfg"
-	"github.com/btcsuite/btcwallet/chain"
+	"github.com/wakiyamap/monawallet/chain"
 	"github.com/wakiyamap/lnd/chainntnfs"
 )
 

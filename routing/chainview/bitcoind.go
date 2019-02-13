@@ -10,8 +10,8 @@ import (
 	"github.com/wakiyamap/monad/btcjson"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/btcsuite/btcwallet/chain"
-	"github.com/btcsuite/btcwallet/wtxmgr"
+	"github.com/wakiyamap/monawallet/chain"
+	"github.com/wakiyamap/monawallet/wtxmgr"
 	"github.com/wakiyamap/lnd/channeldb"
 )
 

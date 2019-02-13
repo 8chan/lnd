@@ -15,7 +15,7 @@ import (
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/wire"
 	"github.com/btcsuite/btcutil"
-	_ "github.com/btcsuite/btcwallet/walletdb/bdb"
+	_ "github.com/wakiyamap/monawallet/walletdb/bdb"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/keychain"
 	"github.com/wakiyamap/lnd/lnwire"

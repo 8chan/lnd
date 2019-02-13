@@ -21,8 +21,8 @@ import (
 	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/monad/wire"
 	"github.com/btcsuite/btcutil"
-	"github.com/btcsuite/btcwallet/chain"
-	"github.com/btcsuite/btcwallet/walletdb"
+	"github.com/wakiyamap/monawallet/chain"
+	"github.com/wakiyamap/monawallet/walletdb"
 	"github.com/wakiyamap/neutrino"
 )
 

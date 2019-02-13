@@ -20,9 +20,9 @@ import (
 	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/monad/wire"
 	"github.com/btcsuite/btcutil"
-	"github.com/btcsuite/btcwallet/chain"
-	"github.com/btcsuite/btcwallet/walletdb"
-	_ "github.com/btcsuite/btcwallet/walletdb/bdb" // Required to register the boltdb walletdb implementation.
+	"github.com/wakiyamap/monawallet/chain"
+	"github.com/wakiyamap/monawallet/walletdb"
+	_ "github.com/wakiyamap/monawallet/walletdb/bdb" // Required to register the boltdb walletdb implementation.
 	"github.com/wakiyamap/monad/btcjson"
 
 	"github.com/wakiyamap/neutrino"

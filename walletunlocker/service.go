@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/wakiyamap/monad/chaincfg"
-	"github.com/btcsuite/btcwallet/wallet"
+	"github.com/wakiyamap/monawallet/wallet"
 	"github.com/wakiyamap/lnd/aezeed"
 	"github.com/wakiyamap/lnd/keychain"
 	"github.com/wakiyamap/lnd/lnrpc"

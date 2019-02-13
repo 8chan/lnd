@@ -10,7 +10,7 @@ import (
 
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/integration/rpctest"
-	"github.com/btcsuite/btcwallet/chain"
+	"github.com/wakiyamap/monawallet/chain"
 	"github.com/wakiyamap/lnd/chainntnfs"
 	"github.com/wakiyamap/lnd/channeldb"
 )

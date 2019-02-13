@@ -2,9 +2,9 @@ package lnwallet
 
 import (
 	"github.com/btcsuite/btclog"
-	"github.com/btcsuite/btcwallet/chain"
-	btcwallet "github.com/btcsuite/btcwallet/wallet"
-	"github.com/btcsuite/btcwallet/wtxmgr"
+	"github.com/wakiyamap/monawallet/chain"
+	btcwallet "github.com/wakiyamap/monawallet/wallet"
+	"github.com/wakiyamap/monawallet/wtxmgr"
 
 	"github.com/wakiyamap/lnd/build"
 )

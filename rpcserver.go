@@ -23,7 +23,7 @@ import (
 	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/monad/wire"
 	"github.com/btcsuite/btcutil"
-	"github.com/btcsuite/btcwallet/waddrmgr"
+	"github.com/wakiyamap/monawallet/waddrmgr"
 	"github.com/coreos/bbolt"
 	"github.com/davecgh/go-spew/spew"
 	proxy "github.com/grpc-ecosystem/grpc-gateway/runtime"

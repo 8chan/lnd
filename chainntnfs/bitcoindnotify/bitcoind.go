@@ -14,7 +14,7 @@ import (
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/wire"
 	"github.com/btcsuite/btcutil"
-	"github.com/btcsuite/btcwallet/chain"
+	"github.com/wakiyamap/monawallet/chain"
 	"github.com/wakiyamap/lnd/chainntnfs"
 	"github.com/wakiyamap/lnd/queue"
 )

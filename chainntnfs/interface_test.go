@@ -16,8 +16,8 @@ import (
 	"github.com/wakiyamap/monad/rpcclient"
 	"github.com/wakiyamap/monad/wire"
 	"github.com/btcsuite/btcutil"
-	"github.com/btcsuite/btcwallet/chain"
-	_ "github.com/btcsuite/btcwallet/walletdb/bdb" // Required to auto-register the boltdb walletdb implementation.
+	"github.com/wakiyamap/monawallet/chain"
+	_ "github.com/wakiyamap/monawallet/walletdb/bdb" // Required to auto-register the boltdb walletdb implementation.
 	"github.com/wakiyamap/neutrino"
 	"github.com/wakiyamap/lnd/chainntnfs"
 	"github.com/wakiyamap/lnd/chainntnfs/bitcoindnotify"
