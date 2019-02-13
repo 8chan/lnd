@@ -9,10 +9,10 @@ import (
 	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/monautil"
 
+	"github.com/wakiyamap/lnd/lnwallet"
 	"github.com/wakiyamap/monawallet/chain"
 	"github.com/wakiyamap/monawallet/waddrmgr"
 	"github.com/wakiyamap/neutrino"
-	"github.com/wakiyamap/lnd/lnwallet"
 )
 
 var (

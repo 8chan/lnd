@@ -10,12 +10,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/wakiyamap/monad/btcec"
-	"github.com/wakiyamap/monad/wire"
-	"github.com/wakiyamap/monautil"
 	"github.com/coreos/bbolt"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/go-errors/errors"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/wire"
+	"github.com/wakiyamap/monautil"
 
 	"github.com/wakiyamap/lightning-onion"
 	"github.com/wakiyamap/lnd/channeldb"

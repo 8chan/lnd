@@ -12,13 +12,13 @@ import (
 	"net"
 	"time"
 
+	"github.com/coreos/bbolt"
+	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/monautil"
-	"github.com/coreos/bbolt"
-	"github.com/wakiyamap/lnd/lnwire"
 )
 
 var (

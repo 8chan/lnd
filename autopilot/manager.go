@@ -5,10 +5,10 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/lnd/lnwallet"
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/routing"
+	"github.com/wakiyamap/monad/btcec"
 )
 
 // ManagerCfg houses a set of values and methods that is passed to the Manager

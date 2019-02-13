@@ -4,9 +4,9 @@ import (
 	"errors"
 	"fmt"
 
+	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monautil"
-	"github.com/wakiyamap/lnd/lnwire"
 )
 
 // ReservationError wraps certain errors returned during channel reservation

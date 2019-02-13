@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/wakiyamap/monad/btcec"
-	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/lnd/lnwallet"
 	"github.com/wakiyamap/lnd/watchtower/blob"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/wire"
 )
 
 // WriteElement is a one-stop shop to write the big endian representation of

@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/lntypes"
 	"github.com/wakiyamap/lnd/lnwire"
+	"github.com/wakiyamap/monad/chaincfg"
 )
 
 var (

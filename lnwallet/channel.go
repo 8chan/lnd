@@ -8,6 +8,7 @@ import (
 	"sort"
 	"sync"
 
+	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/monad/blockchain"
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
@@ -15,7 +16,6 @@ import (
 	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/monautil/txsort"
-	"github.com/davecgh/go-spew/spew"
 
 	"github.com/wakiyamap/lnd/chainntnfs"
 	"github.com/wakiyamap/lnd/channeldb"

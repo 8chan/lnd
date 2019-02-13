@@ -3,10 +3,10 @@ package discovery
 import (
 	"time"
 
-	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/routing"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
 )
 
 // ChannelGraphTimeSeries is an interface that provides time and block based

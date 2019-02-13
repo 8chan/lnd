@@ -10,12 +10,12 @@ import (
 	"sync/atomic"
 	"time"
 
+	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/connmgr"
 	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/davecgh/go-spew/spew"
 
 	"github.com/wakiyamap/lnd/brontide"
 	"github.com/wakiyamap/lnd/chainntnfs"

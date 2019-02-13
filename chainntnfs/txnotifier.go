@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"sync"
 
+	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/monautil"
-	"github.com/wakiyamap/lnd/channeldb"
 )
 
 const (

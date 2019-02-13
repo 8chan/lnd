@@ -5,13 +5,13 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/wakiyamap/monad/btcec"
-	"github.com/wakiyamap/monad/wire"
-	"github.com/wakiyamap/monautil"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/autopilot"
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/tor"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/wire"
+	"github.com/wakiyamap/monautil"
 )
 
 // validateAtplConfig is a helper method that makes sure the passed

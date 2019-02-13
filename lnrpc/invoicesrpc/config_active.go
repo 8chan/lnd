@@ -3,9 +3,9 @@
 package invoicesrpc
 
 import (
-	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/lnd/invoices"
 	"github.com/wakiyamap/lnd/macaroons"
+	"github.com/wakiyamap/monad/chaincfg"
 )
 
 // Config is the primary configuration struct for the invoices RPC server. It

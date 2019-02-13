@@ -14,12 +14,12 @@ import (
 	"testing/quick"
 	"time"
 
+	"github.com/davecgh/go-spew/spew"
+	"github.com/wakiyamap/lnd/tor"
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/monautil"
-	"github.com/davecgh/go-spew/spew"
-	"github.com/wakiyamap/lnd/tor"
 )
 
 var (

@@ -6,13 +6,13 @@ import (
 	"io"
 	"net"
 
+	"github.com/wakiyamap/lnd/keychain"
+	"github.com/wakiyamap/lnd/lnwire"
+	"github.com/wakiyamap/lnd/shachain"
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/monautil"
-	"github.com/wakiyamap/lnd/keychain"
-	"github.com/wakiyamap/lnd/lnwire"
-	"github.com/wakiyamap/lnd/shachain"
 )
 
 // outPointSize is the size of a serialized outpoint on disk.

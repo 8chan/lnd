@@ -8,11 +8,11 @@ import (
 	"testing"
 	"time"
 
+	"github.com/wakiyamap/lnd/chainntnfs"
+	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/integration/rpctest"
 	"github.com/wakiyamap/monawallet/chain"
-	"github.com/wakiyamap/lnd/chainntnfs"
-	"github.com/wakiyamap/lnd/channeldb"
 )
 
 var (

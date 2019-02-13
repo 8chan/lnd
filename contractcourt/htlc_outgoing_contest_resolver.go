@@ -5,10 +5,10 @@ import (
 	"github.com/wakiyamap/lnd/input"
 	"io"
 
-	"github.com/wakiyamap/monad/wire"
-	"github.com/wakiyamap/monautil"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/chainntnfs"
+	"github.com/wakiyamap/monad/wire"
+	"github.com/wakiyamap/monautil"
 )
 
 // htlcOutgoingContestResolver is a ContractResolver that's able to resolve an

@@ -5,13 +5,13 @@ import (
 	"sync"
 	"sync/atomic"
 
+	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/rpcclient"
 	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/monautil/gcs/builder"
 	"github.com/wakiyamap/neutrino"
-	"github.com/wakiyamap/lnd/channeldb"
 )
 
 // CfFilteredChainView is an implementation of the FilteredChainView interface

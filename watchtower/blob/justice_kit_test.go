@@ -8,11 +8,11 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/wakiyamap/monad/btcec"
-	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/lnd/input"
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/watchtower/blob"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/txscript"
 )
 
 func makePubKey(i uint64) blob.PubKey {

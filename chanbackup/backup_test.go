@@ -5,9 +5,9 @@ import (
 	"net"
 	"testing"
 
+	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/wakiyamap/lnd/channeldb"
 )
 
 type mockChannelSource struct {

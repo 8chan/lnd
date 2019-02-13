@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"math"
 
+	"github.com/wakiyamap/lnd/input"
+	"github.com/wakiyamap/lnd/lnwallet"
 	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/monautil"
-	"github.com/wakiyamap/lnd/input"
-	"github.com/wakiyamap/lnd/lnwallet"
 )
 
 const (

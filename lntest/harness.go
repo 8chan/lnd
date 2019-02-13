@@ -13,14 +13,14 @@ import (
 	"golang.org/x/net/context"
 	"google.golang.org/grpc/grpclog"
 
+	"github.com/wakiyamap/lnd/lnrpc"
+	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/integration/rpctest"
 	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/monautil"
-	"github.com/wakiyamap/lnd/lnrpc"
-	"github.com/wakiyamap/lnd/lnwire"
 )
 
 const (

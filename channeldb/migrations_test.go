@@ -8,10 +8,10 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/wakiyamap/monautil"
 	"github.com/coreos/bbolt"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/go-errors/errors"
+	"github.com/wakiyamap/monautil"
 )
 
 // TestPaymentStatusesMigration checks that already completed payments will have

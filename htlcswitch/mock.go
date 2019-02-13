@@ -13,10 +13,6 @@ import (
 	"testing"
 	"time"
 
-	"github.com/wakiyamap/monad/btcec"
-	"github.com/wakiyamap/monad/chaincfg/chainhash"
-	"github.com/wakiyamap/monad/txscript"
-	"github.com/wakiyamap/monad/wire"
 	"github.com/go-errors/errors"
 	"github.com/wakiyamap/lightning-onion"
 	"github.com/wakiyamap/lnd/chainntnfs"
@@ -28,6 +24,10 @@ import (
 	"github.com/wakiyamap/lnd/lnwallet"
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/ticker"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/txscript"
+	"github.com/wakiyamap/monad/wire"
 )
 
 type mockPreimageCache struct {

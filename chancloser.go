@@ -3,13 +3,13 @@ package main
 import (
 	"fmt"
 
-	"github.com/wakiyamap/monad/txscript"
-	"github.com/wakiyamap/monad/wire"
-	"github.com/wakiyamap/monautil"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/htlcswitch"
 	"github.com/wakiyamap/lnd/lnwallet"
 	"github.com/wakiyamap/lnd/lnwire"
+	"github.com/wakiyamap/monad/txscript"
+	"github.com/wakiyamap/monad/wire"
+	"github.com/wakiyamap/monautil"
 )
 
 var (

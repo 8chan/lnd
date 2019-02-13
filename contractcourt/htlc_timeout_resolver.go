@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/lnd/lnwallet"
 	"github.com/wakiyamap/lnd/lnwire"
+	"github.com/wakiyamap/monad/wire"
 )
 
 // htlcTimeoutResolver is a ContractResolver that's capable of resolving an

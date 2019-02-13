@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"sort"
 
+	"github.com/wakiyamap/lnd/input"
+	"github.com/wakiyamap/lnd/lnwallet"
 	"github.com/wakiyamap/monad/blockchain"
 	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/monawallet/wallet/txrules"
-	"github.com/wakiyamap/lnd/input"
-	"github.com/wakiyamap/lnd/lnwallet"
 )
 
 var (

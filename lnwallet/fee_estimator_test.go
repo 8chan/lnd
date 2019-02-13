@@ -3,8 +3,8 @@ package lnwallet_test
 import (
 	"testing"
 
-	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/lnd/lnwallet"
+	"github.com/wakiyamap/monautil"
 )
 
 // TestFeeRateTypes checks that converting fee rates between the

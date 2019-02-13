@@ -9,9 +9,9 @@ import (
 
 	prand "math/rand"
 
+	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monautil"
-	"github.com/wakiyamap/lnd/channeldb"
 )
 
 type genGraphFunc func() (testGraph, func(), error)

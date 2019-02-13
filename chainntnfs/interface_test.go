@@ -11,6 +11,11 @@ import (
 	"testing"
 	"time"
 
+	"github.com/wakiyamap/lnd/chainntnfs"
+	"github.com/wakiyamap/lnd/chainntnfs/bitcoindnotify"
+	"github.com/wakiyamap/lnd/chainntnfs/btcdnotify"
+	"github.com/wakiyamap/lnd/chainntnfs/neutrinonotify"
+	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/integration/rpctest"
 	"github.com/wakiyamap/monad/rpcclient"
@@ -19,11 +24,6 @@ import (
 	"github.com/wakiyamap/monawallet/chain"
 	_ "github.com/wakiyamap/monawallet/walletdb/bdb" // Required to auto-register the boltdb walletdb implementation.
 	"github.com/wakiyamap/neutrino"
-	"github.com/wakiyamap/lnd/chainntnfs"
-	"github.com/wakiyamap/lnd/chainntnfs/bitcoindnotify"
-	"github.com/wakiyamap/lnd/chainntnfs/btcdnotify"
-	"github.com/wakiyamap/lnd/chainntnfs/neutrinonotify"
-	"github.com/wakiyamap/lnd/channeldb"
 )
 
 func testSingleConfirmationNotification(miner *rpctest.Harness,

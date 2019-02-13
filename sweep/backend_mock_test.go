@@ -3,9 +3,9 @@ package sweep
 import (
 	"sync"
 
+	"github.com/wakiyamap/lnd/lnwallet"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/wakiyamap/lnd/lnwallet"
 )
 
 // mockBackend simulates a chain backend for realistic behaviour in unit tests

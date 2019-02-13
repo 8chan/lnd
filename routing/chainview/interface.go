@@ -1,9 +1,9 @@
 package chainview
 
 import (
+	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/wakiyamap/lnd/channeldb"
 )
 
 // FilteredChainView represents a subscription to a certain subset of the

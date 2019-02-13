@@ -14,12 +14,12 @@ import (
 
 	macaroon "gopkg.in/macaroon.v2"
 
-	"github.com/wakiyamap/monautil"
 	"github.com/urfave/cli"
 	"github.com/wakiyamap/lnd/build"
 	"github.com/wakiyamap/lnd/lncfg"
 	"github.com/wakiyamap/lnd/lnrpc"
 	"github.com/wakiyamap/lnd/macaroons"
+	"github.com/wakiyamap/monautil"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"

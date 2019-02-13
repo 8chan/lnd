@@ -10,6 +10,12 @@ import (
 	"sync"
 	"sync/atomic"
 
+	"github.com/davecgh/go-spew/spew"
+	"github.com/wakiyamap/lnd/channeldb"
+	"github.com/wakiyamap/lnd/input"
+	"github.com/wakiyamap/lnd/keychain"
+	"github.com/wakiyamap/lnd/lnwire"
+	"github.com/wakiyamap/lnd/shachain"
 	"github.com/wakiyamap/monad/blockchain"
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
@@ -17,12 +23,6 @@ import (
 	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/monautil/txsort"
-	"github.com/davecgh/go-spew/spew"
-	"github.com/wakiyamap/lnd/channeldb"
-	"github.com/wakiyamap/lnd/input"
-	"github.com/wakiyamap/lnd/keychain"
-	"github.com/wakiyamap/lnd/lnwire"
-	"github.com/wakiyamap/lnd/shachain"
 )
 
 const (

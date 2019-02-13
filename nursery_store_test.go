@@ -8,8 +8,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/lnd/channeldb"
+	"github.com/wakiyamap/monad/wire"
 )
 
 // makeTestDB creates a new instance of the ChannelDB for testing purposes. A

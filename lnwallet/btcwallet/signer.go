@@ -1,6 +1,10 @@
 package btcwallet
 
 import (
+	"github.com/go-errors/errors"
+	"github.com/wakiyamap/lnd/input"
+	"github.com/wakiyamap/lnd/keychain"
+	"github.com/wakiyamap/lnd/lnwallet"
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/txscript"
@@ -9,10 +13,6 @@ import (
 	"github.com/wakiyamap/monawallet/waddrmgr"
 	base "github.com/wakiyamap/monawallet/wallet"
 	"github.com/wakiyamap/monawallet/walletdb"
-	"github.com/go-errors/errors"
-	"github.com/wakiyamap/lnd/input"
-	"github.com/wakiyamap/lnd/keychain"
-	"github.com/wakiyamap/lnd/lnwallet"
 )
 
 // FetchInputInfo queries for the WalletController's knowledge of the passed

@@ -10,11 +10,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/wakiyamap/monad/btcec"
-	"github.com/wakiyamap/monad/wire"
 	"github.com/coreos/bbolt"
 	"github.com/go-errors/errors"
 	"github.com/wakiyamap/lnd/lnwire"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/wire"
 )
 
 const (

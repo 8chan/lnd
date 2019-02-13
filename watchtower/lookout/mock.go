@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"sync"
 
+	"github.com/wakiyamap/lnd/chainntnfs"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/wakiyamap/lnd/chainntnfs"
 )
 
 type MockBackend struct {

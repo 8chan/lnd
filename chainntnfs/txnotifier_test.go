@@ -5,11 +5,11 @@ import (
 	"sync"
 	"testing"
 
+	"github.com/wakiyamap/lnd/chainntnfs"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/monautil"
-	"github.com/wakiyamap/lnd/chainntnfs"
 )
 
 var (

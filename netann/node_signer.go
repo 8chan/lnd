@@ -3,9 +3,9 @@ package netann
 import (
 	"fmt"
 
+	"github.com/wakiyamap/lnd/lnwallet"
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
-	"github.com/wakiyamap/lnd/lnwallet"
 )
 
 // NodeSigner is an implementation of the MessageSigner interface backed by the

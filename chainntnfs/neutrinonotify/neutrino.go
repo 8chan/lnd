@@ -8,6 +8,8 @@ import (
 	"sync/atomic"
 	"time"
 
+	"github.com/wakiyamap/lnd/chainntnfs"
+	"github.com/wakiyamap/lnd/queue"
 	"github.com/wakiyamap/monad/btcjson"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/rpcclient"
@@ -17,8 +19,6 @@ import (
 	"github.com/wakiyamap/monautil/gcs/builder"
 	"github.com/wakiyamap/monawallet/waddrmgr"
 	"github.com/wakiyamap/neutrino"
-	"github.com/wakiyamap/lnd/chainntnfs"
-	"github.com/wakiyamap/lnd/queue"
 )
 
 const (

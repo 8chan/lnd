@@ -4,10 +4,10 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/lnd/chainntnfs"
 	"github.com/wakiyamap/lnd/watchtower/blob"
 	"github.com/wakiyamap/lnd/watchtower/wtdb"
+	"github.com/wakiyamap/monad/wire"
 )
 
 // Config houses the Lookout's required resources to properly fulfill it's duty,

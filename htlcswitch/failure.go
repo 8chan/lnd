@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/lightning-onion"
 	"github.com/wakiyamap/lnd/lnwire"
+	"github.com/wakiyamap/monad/btcec"
 )
 
 // ForwardingError wraps an lnwire.FailureMessage in a struct that also

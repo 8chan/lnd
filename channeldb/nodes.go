@@ -6,9 +6,9 @@ import (
 	"net"
 	"time"
 
+	"github.com/coreos/bbolt"
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/coreos/bbolt"
 )
 
 var (

@@ -8,8 +8,8 @@ import (
 
 	"container/heap"
 
-	"github.com/wakiyamap/monad/btcec"
 	"github.com/coreos/bbolt"
+	"github.com/wakiyamap/monad/btcec"
 
 	"github.com/wakiyamap/lightning-onion"
 	"github.com/wakiyamap/lnd/channeldb"

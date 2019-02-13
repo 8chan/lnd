@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"net"
 
+	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/wakiyamap/lnd/channeldb"
 )
 
 // LiveChannelSource is an interface that allows us to query for the set of

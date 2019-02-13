@@ -4,11 +4,11 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/lnrpc"
 	"github.com/wakiyamap/lnd/routing"
 	"github.com/wakiyamap/lnd/zpay32"
+	"github.com/wakiyamap/monad/chaincfg"
 )
 
 // CreateRPCInvoice creates an *lnrpc.Invoice from the *channeldb.Invoice.

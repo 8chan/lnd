@@ -5,10 +5,10 @@ import (
 	"errors"
 	"io"
 
+	"github.com/wakiyamap/lnd/keychain"
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/wakiyamap/lnd/keychain"
 )
 
 var (

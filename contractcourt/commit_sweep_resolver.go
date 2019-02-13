@@ -7,8 +7,8 @@ import (
 
 	"github.com/wakiyamap/lnd/input"
 
-	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/lnd/lnwallet"
+	"github.com/wakiyamap/monad/wire"
 )
 
 // commitSweepResolver is a resolver that will attempt to sweep the commitment

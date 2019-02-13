@@ -5,8 +5,8 @@ import (
 	"net"
 	"time"
 
-	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/lnd/watchtower/wtserver"
+	"github.com/wakiyamap/monad/btcec"
 )
 
 // MockPeer emulates a single endpoint of brontide transport.

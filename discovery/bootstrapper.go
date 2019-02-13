@@ -12,13 +12,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/wakiyamap/monad/btcec"
-	"github.com/wakiyamap/monautil/bech32"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/miekg/dns"
 	"github.com/wakiyamap/lnd/autopilot"
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/tor"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monautil/bech32"
 )
 
 func init() {

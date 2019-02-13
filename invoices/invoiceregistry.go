@@ -7,14 +7,14 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/wakiyamap/monad/chaincfg"
-	"github.com/wakiyamap/monautil"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/lntypes"
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/queue"
 	"github.com/wakiyamap/lnd/zpay32"
+	"github.com/wakiyamap/monad/chaincfg"
+	"github.com/wakiyamap/monautil"
 )
 
 var (

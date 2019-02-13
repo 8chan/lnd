@@ -13,6 +13,7 @@ import (
 	"time"
 
 	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/btcjson"
 	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/integration/rpctest"
@@ -23,10 +24,9 @@ import (
 	"github.com/wakiyamap/monawallet/chain"
 	"github.com/wakiyamap/monawallet/walletdb"
 	_ "github.com/wakiyamap/monawallet/walletdb/bdb" // Required to register the boltdb walletdb implementation.
-	"github.com/wakiyamap/monad/btcjson"
 
-	"github.com/wakiyamap/neutrino"
 	"github.com/wakiyamap/lnd/channeldb"
+	"github.com/wakiyamap/neutrino"
 )
 
 var (

@@ -12,13 +12,6 @@ import (
 	"sync"
 	"time"
 
-	"github.com/wakiyamap/monad/chaincfg/chainhash"
-	"github.com/wakiyamap/monad/rpcclient"
-	"github.com/wakiyamap/monautil"
-	"github.com/wakiyamap/monawallet/chain"
-	"github.com/wakiyamap/monawallet/wallet"
-	"github.com/wakiyamap/monawallet/walletdb"
-	"github.com/wakiyamap/neutrino"
 	"github.com/wakiyamap/lnd/chainntnfs"
 	"github.com/wakiyamap/lnd/chainntnfs/bitcoindnotify"
 	"github.com/wakiyamap/lnd/chainntnfs/btcdnotify"
@@ -31,6 +24,13 @@ import (
 	"github.com/wakiyamap/lnd/lnwallet/btcwallet"
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/routing/chainview"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/rpcclient"
+	"github.com/wakiyamap/monautil"
+	"github.com/wakiyamap/monawallet/chain"
+	"github.com/wakiyamap/monawallet/wallet"
+	"github.com/wakiyamap/monawallet/walletdb"
+	"github.com/wakiyamap/neutrino"
 )
 
 const (

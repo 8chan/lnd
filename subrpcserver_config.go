@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/lnd/autopilot"
 	"github.com/wakiyamap/lnd/invoices"
 	"github.com/wakiyamap/lnd/lnrpc/autopilotrpc"
@@ -13,6 +12,7 @@ import (
 	"github.com/wakiyamap/lnd/lnrpc/signrpc"
 	"github.com/wakiyamap/lnd/lnrpc/walletrpc"
 	"github.com/wakiyamap/lnd/macaroons"
+	"github.com/wakiyamap/monad/chaincfg"
 )
 
 // subRPCServerConfigs is special sub-config in the main configuration that

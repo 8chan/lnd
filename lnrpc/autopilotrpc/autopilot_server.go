@@ -7,9 +7,9 @@ import (
 	"encoding/hex"
 	"sync/atomic"
 
-	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/lnd/autopilot"
 	"github.com/wakiyamap/lnd/lnrpc"
+	"github.com/wakiyamap/monad/btcec"
 	"google.golang.org/grpc"
 	"gopkg.in/macaroon-bakery.v2/bakery"
 )

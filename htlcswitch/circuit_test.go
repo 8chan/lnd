@@ -6,13 +6,13 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/wakiyamap/monad/btcec"
-	bitcoinCfg "github.com/wakiyamap/monad/chaincfg"
-	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/lightning-onion"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/htlcswitch"
 	"github.com/wakiyamap/lnd/lnwire"
+	"github.com/wakiyamap/monad/btcec"
+	bitcoinCfg "github.com/wakiyamap/monad/chaincfg"
+	"github.com/wakiyamap/monautil"
 )
 
 var (

@@ -7,12 +7,6 @@ import (
 	"testing"
 	"time"
 
-	"github.com/wakiyamap/monad/blockchain"
-	"github.com/wakiyamap/monad/btcec"
-	"github.com/wakiyamap/monad/txscript"
-	"github.com/wakiyamap/monad/wire"
-	"github.com/wakiyamap/monautil"
-	"github.com/wakiyamap/monautil/txsort"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/input"
 	"github.com/wakiyamap/lnd/keychain"
@@ -22,6 +16,12 @@ import (
 	"github.com/wakiyamap/lnd/watchtower/wtdb"
 	"github.com/wakiyamap/lnd/watchtower/wtmock"
 	"github.com/wakiyamap/lnd/watchtower/wtpolicy"
+	"github.com/wakiyamap/monad/blockchain"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/txscript"
+	"github.com/wakiyamap/monad/wire"
+	"github.com/wakiyamap/monautil"
+	"github.com/wakiyamap/monautil/txsort"
 )
 
 const csvDelay uint32 = 144

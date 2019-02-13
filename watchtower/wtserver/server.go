@@ -9,15 +9,15 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/wakiyamap/monad/btcec"
-	"github.com/wakiyamap/monad/connmgr"
-	"github.com/wakiyamap/monad/txscript"
-	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/watchtower/blob"
 	"github.com/wakiyamap/lnd/watchtower/wtdb"
 	"github.com/wakiyamap/lnd/watchtower/wtpolicy"
 	"github.com/wakiyamap/lnd/watchtower/wtwire"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/connmgr"
+	"github.com/wakiyamap/monad/txscript"
+	"github.com/wakiyamap/monautil"
 )
 
 var (

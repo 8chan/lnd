@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/tor"
+	"github.com/wakiyamap/monad/btcec"
 )
 
 var (

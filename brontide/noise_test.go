@@ -9,8 +9,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/lnd/lnwire"
+	"github.com/wakiyamap/monad/btcec"
 )
 
 type maybeNetConn struct {

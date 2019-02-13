@@ -6,8 +6,8 @@ import (
 
 	prand "math/rand"
 
-	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/lnd/lnwire"
+	"github.com/wakiyamap/monautil"
 )
 
 func TestConstraintsChannelBudget(t *testing.T) {

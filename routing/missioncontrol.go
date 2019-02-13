@@ -4,10 +4,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/wakiyamap/monad/btcec"
 	"github.com/coreos/bbolt"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/lnwire"
+	"github.com/wakiyamap/monad/btcec"
 )
 
 const (

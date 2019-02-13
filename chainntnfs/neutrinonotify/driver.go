@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/wakiyamap/neutrino"
 	"github.com/wakiyamap/lnd/chainntnfs"
+	"github.com/wakiyamap/neutrino"
 )
 
 // createNewNotifier creates a new instance of the ChainNotifier interface

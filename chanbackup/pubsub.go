@@ -6,9 +6,9 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/keychain"
+	"github.com/wakiyamap/monad/wire"
 )
 
 // Swapper is an interface that allows the chanbackup.SubSwapper to update the

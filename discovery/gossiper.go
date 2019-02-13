@@ -10,9 +10,6 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/wakiyamap/monad/btcec"
-	"github.com/wakiyamap/monad/chaincfg/chainhash"
-	"github.com/wakiyamap/monad/wire"
 	"github.com/coreos/bbolt"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/chainntnfs"
@@ -22,6 +19,9 @@ import (
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/multimutex"
 	"github.com/wakiyamap/lnd/routing"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/wire"
 )
 
 var (

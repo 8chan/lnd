@@ -5,9 +5,9 @@ import (
 	"os"
 	"testing"
 
+	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/wakiyamap/lnd/channeldb"
 )
 
 // makeTestDB creates a new instance of the ChannelDB for testing purposes. A

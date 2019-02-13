@@ -5,11 +5,11 @@ import (
 	"net"
 	"time"
 
+	"github.com/wakiyamap/lnd/tor"
+	"github.com/wakiyamap/lnd/watchtower/lookout"
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/monautil"
-	"github.com/wakiyamap/lnd/tor"
-	"github.com/wakiyamap/lnd/watchtower/lookout"
 )
 
 const (

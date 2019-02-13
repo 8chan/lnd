@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/wakiyamap/monad/wire"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/keychain"
+	"github.com/wakiyamap/monad/wire"
 )
 
 type mockSwapper struct {

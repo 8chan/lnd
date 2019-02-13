@@ -8,8 +8,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/lnd/lnwire"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"golang.org/x/time/rate"
 )
 

@@ -7,12 +7,12 @@ import (
 	"testing"
 	"time"
 
+	"github.com/wakiyamap/lnd/lnwire"
+	"github.com/wakiyamap/lnd/routing"
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/monautil/bech32"
-	"github.com/wakiyamap/lnd/lnwire"
-	"github.com/wakiyamap/lnd/routing"
 )
 
 // TestDecodeAmount ensures that the amount string in the hrp of the Invoice

@@ -8,13 +8,13 @@ import (
 	"testing"
 	"time"
 
+	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monawallet/waddrmgr"
 	"github.com/wakiyamap/monawallet/wallet"
 	"github.com/wakiyamap/monawallet/walletdb"
-	"github.com/davecgh/go-spew/spew"
 
 	_ "github.com/wakiyamap/monawallet/walletdb/bdb" // Required in order to create the default database.
 )

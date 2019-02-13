@@ -10,12 +10,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/wakiyamap/monautil"
 	"github.com/btcsuite/fastsha256"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/ticker"
+	"github.com/wakiyamap/monautil"
 )
 
 func genPreimage() ([32]byte, error) {

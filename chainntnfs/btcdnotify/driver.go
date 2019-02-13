@@ -4,9 +4,9 @@ import (
 	"errors"
 	"fmt"
 
+	"github.com/wakiyamap/lnd/chainntnfs"
 	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/monad/rpcclient"
-	"github.com/wakiyamap/lnd/chainntnfs"
 )
 
 // createNewNotifier creates a new instance of the ChainNotifier interface

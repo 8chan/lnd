@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/wakiyamap/lnd/lnwallet"
 	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/monautil"
-	"github.com/wakiyamap/lnd/lnwallet"
 )
 
 // TestDetermineFeePerKw tests that given a fee preference, the

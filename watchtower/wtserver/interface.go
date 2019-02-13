@@ -5,8 +5,8 @@ import (
 	"net"
 	"time"
 
-	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/lnd/watchtower/wtdb"
+	"github.com/wakiyamap/monad/btcec"
 )
 
 // Interface represents a simple, listen-only service that accepts watchtower

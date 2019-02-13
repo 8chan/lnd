@@ -16,11 +16,11 @@ import (
 	"sync"
 	"syscall"
 
-	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/golang/protobuf/jsonpb"
 	"github.com/golang/protobuf/proto"
 	"github.com/urfave/cli"
 	"github.com/wakiyamap/lnd/lnrpc"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"golang.org/x/crypto/ssh/terminal"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc/codes"

@@ -7,12 +7,12 @@ import (
 	"sync"
 	"sync/atomic"
 
+	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/monad/btcjson"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/rpcclient"
 	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/monautil"
-	"github.com/wakiyamap/lnd/channeldb"
 )
 
 // BtcdFilteredChainView is an implementation of the FilteredChainView

@@ -6,12 +6,12 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/wakiyamap/monad/chaincfg/chainhash"
-	"github.com/wakiyamap/monad/wire"
 	"github.com/coreos/bbolt"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/input"
 	"github.com/wakiyamap/lnd/lnwallet"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/wire"
 )
 
 // ContractResolutions is a wrapper struct around the two forms of resolutions

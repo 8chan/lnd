@@ -6,10 +6,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/wakiyamap/monad/connmgr"
 	"github.com/btcsuite/btclog"
 	"github.com/jrick/logrotate/rotator"
-	"github.com/wakiyamap/neutrino"
 	"github.com/wakiyamap/lightning-onion"
 	"github.com/wakiyamap/lnd/autopilot"
 	"github.com/wakiyamap/lnd/build"
@@ -30,6 +28,8 @@ import (
 	"github.com/wakiyamap/lnd/signal"
 	"github.com/wakiyamap/lnd/sweep"
 	"github.com/wakiyamap/lnd/watchtower"
+	"github.com/wakiyamap/monad/connmgr"
+	"github.com/wakiyamap/neutrino"
 )
 
 // Loggers per subsystem.  A single backend logger is created and all subsystem

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/lnd/keychain"
+	"github.com/wakiyamap/monad/btcec"
 )
 
 var (

@@ -8,13 +8,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/wakiyamap/monad/chaincfg"
-	"github.com/wakiyamap/monawallet/wallet"
 	"github.com/wakiyamap/lnd/aezeed"
 	"github.com/wakiyamap/lnd/keychain"
 	"github.com/wakiyamap/lnd/lnrpc"
 	"github.com/wakiyamap/lnd/lnwallet/btcwallet"
 	"github.com/wakiyamap/lnd/walletunlocker"
+	"github.com/wakiyamap/monad/chaincfg"
+	"github.com/wakiyamap/monawallet/wallet"
 	"golang.org/x/net/context"
 )
 

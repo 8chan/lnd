@@ -5,10 +5,10 @@ import (
 	"reflect"
 	"testing"
 
+	"github.com/wakiyamap/lnd/keychain"
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/wakiyamap/lnd/keychain"
 )
 
 func TestSignDescriptorSerialization(t *testing.T) {

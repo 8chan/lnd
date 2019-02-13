@@ -4,13 +4,13 @@ import (
 	"net"
 	"sync"
 
+	"github.com/wakiyamap/lnd/channeldb"
+	"github.com/wakiyamap/lnd/input"
+	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/monautil"
-	"github.com/wakiyamap/lnd/channeldb"
-	"github.com/wakiyamap/lnd/input"
-	"github.com/wakiyamap/lnd/lnwire"
 )
 
 // ChannelContribution is the primary constituent of the funding workflow

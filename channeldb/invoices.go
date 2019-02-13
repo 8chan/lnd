@@ -9,10 +9,10 @@ import (
 	"io"
 	"time"
 
-	"github.com/wakiyamap/monad/wire"
 	"github.com/coreos/bbolt"
 	"github.com/wakiyamap/lnd/lntypes"
 	"github.com/wakiyamap/lnd/lnwire"
+	"github.com/wakiyamap/monad/wire"
 )
 
 var (

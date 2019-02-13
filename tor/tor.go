@@ -7,8 +7,8 @@ import (
 	"net"
 	"strconv"
 
-	"github.com/wakiyamap/monad/connmgr"
 	"github.com/miekg/dns"
+	"github.com/wakiyamap/monad/connmgr"
 	"golang.org/x/net/proxy"
 )
 

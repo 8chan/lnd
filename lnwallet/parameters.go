@@ -1,9 +1,9 @@
 package lnwallet
 
 import (
+	"github.com/wakiyamap/lnd/input"
 	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/monawallet/wallet/txrules"
-	"github.com/wakiyamap/lnd/input"
 )
 
 // DefaultDustLimit is used to calculate the dust HTLC amount which will be

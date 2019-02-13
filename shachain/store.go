@@ -4,8 +4,8 @@ import (
 	"encoding/binary"
 	"io"
 
-	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/go-errors/errors"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
 )
 
 // Store is an interface which serves as an abstraction over data structure

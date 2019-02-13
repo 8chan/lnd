@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/wakiyamap/lnd/chainntnfs"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monawallet/chain"
-	"github.com/wakiyamap/lnd/chainntnfs"
 )
 
 // UnsafeStart starts the notifier with a specified best height and optional

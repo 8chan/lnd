@@ -17,11 +17,6 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/wakiyamap/monad/btcec"
-	"github.com/wakiyamap/monad/chaincfg/chainhash"
-	"github.com/wakiyamap/monad/connmgr"
-	"github.com/wakiyamap/monad/wire"
-	"github.com/wakiyamap/monautil"
 	"github.com/coreos/bbolt"
 	"github.com/go-errors/errors"
 	sphinx "github.com/wakiyamap/lightning-onion"
@@ -44,6 +39,11 @@ import (
 	"github.com/wakiyamap/lnd/sweep"
 	"github.com/wakiyamap/lnd/ticker"
 	"github.com/wakiyamap/lnd/tor"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/connmgr"
+	"github.com/wakiyamap/monad/wire"
+	"github.com/wakiyamap/monautil"
 )
 
 const (

@@ -10,12 +10,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/lnd/chainntnfs"
 	"github.com/wakiyamap/lnd/watchtower/blob"
 	"github.com/wakiyamap/lnd/watchtower/lookout"
 	"github.com/wakiyamap/lnd/watchtower/wtdb"
 	"github.com/wakiyamap/lnd/watchtower/wtpolicy"
+	"github.com/wakiyamap/monad/wire"
 )
 
 type mockPunisher struct {

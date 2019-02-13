@@ -1,12 +1,12 @@
 package main
 
 import (
+	"github.com/wakiyamap/lnd/keychain"
 	"github.com/wakiyamap/monad/chaincfg"
 	bitcoinCfg "github.com/wakiyamap/monad/chaincfg"
+	monacoinCfg "github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	bitcoinWire "github.com/wakiyamap/monad/wire"
-	"github.com/wakiyamap/lnd/keychain"
-	monacoinCfg "github.com/wakiyamap/monad/chaincfg"
 	monacoinWire "github.com/wakiyamap/monad/wire"
 )
 

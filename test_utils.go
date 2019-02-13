@@ -10,10 +10,6 @@ import (
 	"net"
 	"os"
 
-	"github.com/wakiyamap/monad/btcec"
-	"github.com/wakiyamap/monad/chaincfg/chainhash"
-	"github.com/wakiyamap/monad/wire"
-	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/lnd/chainntnfs"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/contractcourt"
@@ -24,6 +20,10 @@ import (
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/shachain"
 	"github.com/wakiyamap/lnd/ticker"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/wire"
+	"github.com/wakiyamap/monautil"
 )
 
 var (

@@ -3,9 +3,9 @@ package chanbackup
 import (
 	"net"
 
-	"github.com/wakiyamap/monad/btcec"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/keychain"
+	"github.com/wakiyamap/monad/btcec"
 )
 
 // ChannelRestorer is an interface that allows the Recover method to map the

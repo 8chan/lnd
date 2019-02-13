@@ -9,14 +9,14 @@ import (
 	"sync"
 	"sync/atomic"
 
+	"github.com/wakiyamap/lnd/chainntnfs"
+	"github.com/wakiyamap/lnd/queue"
 	"github.com/wakiyamap/monad/btcjson"
 	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/monawallet/chain"
-	"github.com/wakiyamap/lnd/chainntnfs"
-	"github.com/wakiyamap/lnd/queue"
 )
 
 const (

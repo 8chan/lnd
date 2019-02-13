@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/wakiyamap/monad/chaincfg"
-	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/lnwire"
+	"github.com/wakiyamap/monad/chaincfg"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
 )
 
 const (

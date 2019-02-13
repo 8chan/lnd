@@ -3,11 +3,11 @@ package wtmock
 import (
 	"sync"
 
+	"github.com/wakiyamap/lnd/input"
+	"github.com/wakiyamap/lnd/keychain"
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/wakiyamap/lnd/input"
-	"github.com/wakiyamap/lnd/keychain"
 )
 
 // MockSigner is an input.Signer that allows one to add arbitrary private keys

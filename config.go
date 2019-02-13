@@ -19,7 +19,6 @@ import (
 	"strings"
 	"time"
 
-	"github.com/wakiyamap/monautil"
 	flags "github.com/jessevdk/go-flags"
 	"github.com/wakiyamap/lnd/build"
 	"github.com/wakiyamap/lnd/htlcswitch/hodl"
@@ -28,6 +27,7 @@ import (
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/routing"
 	"github.com/wakiyamap/lnd/tor"
+	"github.com/wakiyamap/monautil"
 )
 
 const (

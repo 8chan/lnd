@@ -9,6 +9,8 @@ import (
 	"sync"
 	"time"
 
+	"github.com/wakiyamap/lnd/keychain"
+	"github.com/wakiyamap/lnd/lnwallet"
 	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/txscript"
@@ -18,8 +20,6 @@ import (
 	"github.com/wakiyamap/monawallet/waddrmgr"
 	base "github.com/wakiyamap/monawallet/wallet"
 	"github.com/wakiyamap/monawallet/walletdb"
-	"github.com/wakiyamap/lnd/keychain"
-	"github.com/wakiyamap/lnd/lnwallet"
 )
 
 const (

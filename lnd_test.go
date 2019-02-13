@@ -18,6 +18,11 @@ import (
 	"testing"
 	"time"
 
+	"github.com/davecgh/go-spew/spew"
+	"github.com/go-errors/errors"
+	"github.com/wakiyamap/lnd/lnrpc"
+	"github.com/wakiyamap/lnd/lntest"
+	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/monad/btcjson"
 	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
@@ -25,11 +30,6 @@ import (
 	"github.com/wakiyamap/monad/rpcclient"
 	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/monautil"
-	"github.com/davecgh/go-spew/spew"
-	"github.com/go-errors/errors"
-	"github.com/wakiyamap/lnd/lnrpc"
-	"github.com/wakiyamap/lnd/lntest"
-	"github.com/wakiyamap/lnd/lnwire"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )
