@@ -12,7 +12,7 @@ import (
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 	"github.com/coreos/bbolt"
 	"github.com/davecgh/go-spew/spew"
 
@@ -298,7 +298,7 @@ func convertToSecondLevelRevoke(bo *breachedOutput, breachInfo *retributionInfo,
 	// to know the new input value (the second level transactions shaves
 	// off some funds to fees).
 	newAmt := spendingTx.TxOut[0].Value
-	bo.amt = btcutil.Amount(newAmt)
+	bo.amt = monautil.Amount(newAmt)
 	bo.signDesc.Output.Value = newAmt
 	bo.signDesc.Output.PkScript = spendingTx.TxOut[0].PkScript
 
@@ -580,7 +580,7 @@ justiceTxBroadcast:
 
 		// Compute both the total value of funds being swept and the
 		// amount of funds that were revoked from the counter party.
-		var totalFunds, revokedFunds btcutil.Amount
+		var totalFunds, revokedFunds monautil.Amount
 		for _, inp := range breachInfo.breachedOutputs {
 			totalFunds += inp.Amount()
 
@@ -753,7 +753,7 @@ func (b *breachArbiter) handleBreachHandoff(breachEvent *ContractBreachEvent) {
 // output. A breached output is an output that we are now entitled to due to a
 // revoked commitment transaction being broadcast.
 type breachedOutput struct {
-	amt         btcutil.Amount
+	amt         monautil.Amount
 	outpoint    wire.OutPoint
 	witnessType input.WitnessType
 	signDesc    input.SignDescriptor
@@ -775,7 +775,7 @@ func makeBreachedOutput(outpoint *wire.OutPoint,
 	amount := signDescriptor.Output.Value
 
 	return breachedOutput{
-		amt:                      btcutil.Amount(amount),
+		amt:                      monautil.Amount(amount),
 		outpoint:                 *outpoint,
 		secondLevelWitnessScript: secondLevelScript,
 		witnessType:              witnessType,
@@ -785,7 +785,7 @@ func makeBreachedOutput(outpoint *wire.OutPoint,
 }
 
 // Amount returns the number of satoshis contained in the breached output.
-func (bo *breachedOutput) Amount() btcutil.Amount {
+func (bo *breachedOutput) Amount() monautil.Amount {
 	return bo.amt
 }
 
@@ -1028,9 +1028,9 @@ func (b *breachArbiter) sweepSpendableOutputsTxn(txWeight int64,
 	}
 
 	// Compute the total amount contained in the inputs.
-	var totalAmt btcutil.Amount
+	var totalAmt monautil.Amount
 	for _, input := range inputs {
-		totalAmt += btcutil.Amount(input.SignDesc().Output.Value)
+		totalAmt += monautil.Amount(input.SignDesc().Output.Value)
 	}
 
 	// We'll actually attempt to target inclusion within the next two
@@ -1064,7 +1064,7 @@ func (b *breachArbiter) sweepSpendableOutputsTxn(txWeight int64,
 
 	// Before signing the transaction, check to ensure that it meets some
 	// basic validity requirements.
-	btx := btcutil.NewTx(txn)
+	btx := monautil.NewTx(txn)
 	if err := blockchain.CheckTransactionSanity(btx); err != nil {
 		return nil, err
 	}
@@ -1460,7 +1460,7 @@ func (bo *breachedOutput) Decode(r io.Reader) error {
 	if _, err := io.ReadFull(r, scratch[:8]); err != nil {
 		return err
 	}
-	bo.amt = btcutil.Amount(binary.BigEndian.Uint64(scratch[:8]))
+	bo.amt = monautil.Amount(binary.BigEndian.Uint64(scratch[:8]))
 
 	if err := readOutpoint(r, &bo.outpoint); err != nil {
 		return err

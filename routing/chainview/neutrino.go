@@ -8,8 +8,8 @@ import (
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/rpcclient"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/btcsuite/btcutil"
-	"github.com/btcsuite/btcutil/gcs/builder"
+	"github.com/wakiyamap/monautil"
+	"github.com/wakiyamap/monautil/gcs/builder"
 	"github.com/wakiyamap/neutrino"
 	"github.com/wakiyamap/lnd/channeldb"
 )
@@ -140,7 +140,7 @@ func (c *CfFilteredChainView) Stop() error {
 // end of the main chain. Based on our current chain filter, the block may or
 // may not include any relevant transactions.
 func (c *CfFilteredChainView) onFilteredBlockConnected(height int32,
-	header *wire.BlockHeader, txns []*btcutil.Tx) {
+	header *wire.BlockHeader, txns []*monautil.Tx) {
 
 	mtxs := make([]*wire.MsgTx, len(txns))
 	for i, tx := range txns {

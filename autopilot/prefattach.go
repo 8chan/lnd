@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/wakiyamap/monad/btcec"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 )
 
 // PrefAttachment is an implementation of the AttachmentHeuristic interface
@@ -69,7 +69,7 @@ func (p *PrefAttachment) Name() string {
 //
 // NOTE: This is a part of the AttachmentHeuristic interface.
 func (p *PrefAttachment) NodeScores(g ChannelGraph, chans []Channel,
-	chanSize btcutil.Amount, nodes map[NodeID]struct{}) (
+	chanSize monautil.Amount, nodes map[NodeID]struct{}) (
 	map[NodeID]*NodeScore, error) {
 
 	// Count the number of channels for each particular node in the graph.

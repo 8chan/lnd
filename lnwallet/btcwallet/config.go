@@ -6,7 +6,7 @@ import (
 
 	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/lnd/lnwallet"
 
 	"github.com/wakiyamap/monawallet/chain"
@@ -20,14 +20,14 @@ import (
 )
 
 var (
-	lnwalletHomeDir = btcutil.AppDataDir("lnwallet", false)
+	lnwalletHomeDir = monautil.AppDataDir("lnwallet", false)
 	defaultDataDir  = lnwalletHomeDir
 
 	defaultLogFilename = "lnwallet.log"
 	defaultLogDirname  = "logs"
 	defaultLogDir      = filepath.Join(lnwalletHomeDir, defaultLogDirname)
 
-	btcdHomeDir        = btcutil.AppDataDir("btcd", false)
+	btcdHomeDir        = monautil.AppDataDir("btcd", false)
 	btcdHomedirCAFile  = filepath.Join(btcdHomeDir, "rpc.cert")
 	defaultRPCKeyFile  = filepath.Join(lnwalletHomeDir, "rpc.key")
 	defaultRPCCertFile = filepath.Join(lnwalletHomeDir, "rpc.cert")

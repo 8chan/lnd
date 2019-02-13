@@ -13,7 +13,7 @@ import (
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/keychain"
 	"github.com/wakiyamap/lnd/lnwire"
@@ -120,7 +120,7 @@ func TestFetchClosedChannelForID(t *testing.T) {
 		closeSummary := &ChannelCloseSummary{
 			ChanPoint:      state.FundingOutpoint,
 			RemotePub:      state.IdentityPub,
-			SettledBalance: btcutil.Amount(500 + i),
+			SettledBalance: monautil.Amount(500 + i),
 		}
 		if err := state.CloseChannel(closeSummary); err != nil {
 			t.Fatalf("unable to close channel: %v", err)
@@ -141,9 +141,9 @@ func TestFetchClosedChannelForID(t *testing.T) {
 
 		// Make sure we retrieved the correct one by checking the
 		// SettledBalance.
-		if fetchedSummary.SettledBalance != btcutil.Amount(500+i) {
+		if fetchedSummary.SettledBalance != monautil.Amount(500+i) {
 			t.Fatalf("summaries don't match: expected %v got %v",
-				btcutil.Amount(500+i),
+				monautil.Amount(500+i),
 				fetchedSummary.SettledBalance)
 		}
 	}

@@ -15,8 +15,8 @@ import (
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/btcsuite/btcutil"
-	"github.com/btcsuite/btcutil/txsort"
+	"github.com/wakiyamap/monautil"
+	"github.com/wakiyamap/monautil/txsort"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/input"
@@ -35,8 +35,8 @@ const (
 // returned when coin selection for a new funding transaction fails to due
 // having an insufficient amount of confirmed funds.
 type ErrInsufficientFunds struct {
-	amountAvailable btcutil.Amount
-	amountSelected  btcutil.Amount
+	amountAvailable monautil.Amount
+	amountSelected  monautil.Amount
 }
 
 func (e *ErrInsufficientFunds) Error() string {
@@ -70,11 +70,11 @@ type InitFundingReserveMsg struct {
 	NodeAddr net.Addr
 
 	// FundingAmount is the amount of funds requested for this channel.
-	FundingAmount btcutil.Amount
+	FundingAmount monautil.Amount
 
 	// Capacity is the total capacity of the channel which includes the
 	// amount of funds the remote party contributes (if any).
-	Capacity btcutil.Amount
+	Capacity monautil.Amount
 
 	// CommitFeePerKw is the starting accepted satoshis/Kw fee for the set
 	// of initial commitment transactions. In order to ensure timely
@@ -627,7 +627,7 @@ func (l *LightningWallet) handleFundingCancelRequest(req *fundingReserveCancelMs
 // initial funding workflow as both sides must generate a signature for the
 // remote party's commitment transaction, and verify the signature for their
 // version of the commitment transaction.
-func CreateCommitmentTxns(localBalance, remoteBalance btcutil.Amount,
+func CreateCommitmentTxns(localBalance, remoteBalance monautil.Amount,
 	ourChanCfg, theirChanCfg *channeldb.ChannelConfig,
 	localCommitPoint, remoteCommitPoint *btcec.PublicKey,
 	fundingTxIn wire.TxIn) (*wire.MsgTx, *wire.MsgTx, error) {
@@ -644,7 +644,7 @@ func CreateCommitmentTxns(localBalance, remoteBalance btcutil.Amount,
 		return nil, nil, err
 	}
 
-	otxn := btcutil.NewTx(ourCommitTx)
+	otxn := monautil.NewTx(ourCommitTx)
 	if err := blockchain.CheckTransactionSanity(otxn); err != nil {
 		return nil, nil, err
 	}
@@ -656,7 +656,7 @@ func CreateCommitmentTxns(localBalance, remoteBalance btcutil.Amount,
 		return nil, nil, err
 	}
 
-	ttxn := btcutil.NewTx(theirCommitTx)
+	ttxn := monautil.NewTx(theirCommitTx)
 	if err := blockchain.CheckTransactionSanity(ttxn); err != nil {
 		return nil, nil, err
 	}
@@ -1270,7 +1270,7 @@ func (l *LightningWallet) WithCoinSelectLock(f func() error) error {
 // within the passed contribution's inputs. If necessary, a change address will
 // also be generated.
 func (l *LightningWallet) selectCoinsAndChange(feeRate SatPerKWeight,
-	amt btcutil.Amount, minConfs int32,
+	amt monautil.Amount, minConfs int32,
 	contribution *ChannelContribution) error {
 
 	// We hold the coin select mutex while querying for outputs, and
@@ -1375,8 +1375,8 @@ func initStateHints(commit1, commit2 *wire.MsgTx,
 // funds, a non-nil error is returned. Additionally, the total amount of the
 // selected coins are returned in order for the caller to properly handle
 // change+fees.
-func selectInputs(amt btcutil.Amount, coins []*Utxo) (btcutil.Amount, []*Utxo, error) {
-	satSelected := btcutil.Amount(0)
+func selectInputs(amt monautil.Amount, coins []*Utxo) (monautil.Amount, []*Utxo, error) {
+	satSelected := monautil.Amount(0)
 	for i, coin := range coins {
 		satSelected += coin.Value
 		if satSelected >= amt {
@@ -1390,8 +1390,8 @@ func selectInputs(amt btcutil.Amount, coins []*Utxo) (btcutil.Amount, []*Utxo, e
 // change output to fund amt satoshis, adhering to the specified fee rate. The
 // specified fee rate should be expressed in sat/kw for coin selection to
 // function properly.
-func coinSelect(feeRate SatPerKWeight, amt btcutil.Amount,
-	coins []*Utxo) ([]*Utxo, btcutil.Amount, error) {
+func coinSelect(feeRate SatPerKWeight, amt monautil.Amount,
+	coins []*Utxo) ([]*Utxo, monautil.Amount, error) {
 
 	amtNeeded := amt
 	for {

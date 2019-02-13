@@ -10,7 +10,7 @@ import (
 
 	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 	"github.com/davecgh/go-spew/spew"
 
 	"github.com/wakiyamap/lnd/chainntnfs"
@@ -1058,11 +1058,11 @@ func (u *utxoNursery) waitForPreschoolConf(kid *kidOutput,
 type contractMaturityReport struct {
 	// limboBalance is the total number of frozen coins within this
 	// contract.
-	limboBalance btcutil.Amount
+	limboBalance monautil.Amount
 
 	// recoveredBalance is the total value that has been successfully swept
 	// back to the user's wallet.
-	recoveredBalance btcutil.Amount
+	recoveredBalance monautil.Amount
 
 	// maturityHeight is the absolute block height that this output will
 	// mature at.
@@ -1079,7 +1079,7 @@ type htlcMaturityReport struct {
 	outpoint wire.OutPoint
 
 	// amount is the final value that will be swept in back to the wallet.
-	amount btcutil.Amount
+	amount monautil.Amount
 
 	// maturityHeight is the absolute block height that this output will
 	// mature at.
@@ -1445,7 +1445,7 @@ func (k *kidOutput) Decode(r io.Reader) error {
 	if _, err := r.Read(scratch[:]); err != nil {
 		return err
 	}
-	k.amt = btcutil.Amount(byteOrder.Uint64(scratch[:]))
+	k.amt = monautil.Amount(byteOrder.Uint64(scratch[:]))
 
 	if err := readOutpoint(io.LimitReader(r, 40), &k.outpoint); err != nil {
 		return err

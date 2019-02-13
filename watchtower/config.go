@@ -7,7 +7,7 @@ import (
 
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/lnd/tor"
 	"github.com/wakiyamap/lnd/watchtower/lookout"
 )
@@ -54,7 +54,7 @@ type Config struct {
 
 	// NewAddress is used to generate reward addresses, where a cut of
 	// successfully sent funds can be received.
-	NewAddress func() (btcutil.Address, error)
+	NewAddress func() (monautil.Address, error)
 
 	// NodePrivKey is private key to be used in accepting new brontide
 	// connections.

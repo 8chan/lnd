@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/wakiyamap/monad/wire"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/chainntnfs"
 	"github.com/wakiyamap/lnd/input"
@@ -265,7 +265,7 @@ func (s *UtxoSweeper) SweepInput(input input.Input) (chan Result, error) {
 	log.Infof("Sweep request received: out_point=%v, witness_type=%v, "+
 		"time_lock=%v, size=%v", input.OutPoint(), input.WitnessType(),
 		input.BlocksToMaturity(),
-		btcutil.Amount(input.SignDesc().Output.Value))
+		monautil.Amount(input.SignDesc().Output.Value))
 
 	sweeperInput := &sweepInputMessage{
 		input:      input,

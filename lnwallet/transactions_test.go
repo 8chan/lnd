@@ -12,7 +12,7 @@ import (
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/input"
@@ -31,7 +31,7 @@ import (
 // BOLT 03 spec.
 type testContext struct {
 	netParams *chaincfg.Params
-	block1    *btcutil.Block
+	block1    *monautil.Block
 
 	fundingInputPrivKey *btcec.PrivateKey
 	localFundingPrivKey *btcec.PrivateKey
@@ -47,19 +47,19 @@ type testContext struct {
 	localPaymentBasePoint  *btcec.PublicKey
 	remotePaymentBasePoint *btcec.PublicKey
 
-	fundingChangeAddress btcutil.Address
+	fundingChangeAddress monautil.Address
 	fundingInputUtxo     *Utxo
 	fundingInputTxOut    *wire.TxOut
-	fundingTx            *btcutil.Tx
+	fundingTx            *monautil.Tx
 	fundingOutpoint      wire.OutPoint
 	shortChanID          lnwire.ShortChannelID
 
 	htlcs []channeldb.HTLC
 
 	localCsvDelay uint16
-	fundingAmount btcutil.Amount
-	dustLimit     btcutil.Amount
-	feePerKW      btcutil.Amount
+	fundingAmount monautil.Amount
+	dustLimit     monautil.Amount
+	feePerKW      monautil.Amount
 }
 
 // htlcDesc is a description used to construct each HTLC in each test case.
@@ -192,7 +192,7 @@ func newTestContext() (tc *testContext, err error) {
 	}
 
 	const fundingChangeAddressStr = "bcrt1qgyeqfmptyh780dsk32qawsvdffc2g5q5sxamg0"
-	tc.fundingChangeAddress, err = btcutil.DecodeAddress(
+	tc.fundingChangeAddress, err = monautil.DecodeAddress(
 		fundingChangeAddressStr, tc.netParams)
 	if err != nil {
 		err = fmt.Errorf("Failed to parse address: %v", err)
@@ -331,7 +331,7 @@ func (tc *testContext) extractFundingInput() (*Utxo, *wire.TxOut, error) {
 
 	block1Utxo := Utxo{
 		AddressType: WitnessPubKey,
-		Value:       btcutil.Amount(txout.Value),
+		Value:       monautil.Amount(txout.Value),
 		OutPoint: wire.OutPoint{
 			Hash:  *tx.Hash(),
 			Index: 0,
@@ -1030,7 +1030,7 @@ func TestCommitmentSpendValidation(t *testing.T) {
 	}
 	fakeFundingTxIn := wire.NewTxIn(fundingOut, nil, nil)
 
-	const channelBalance = btcutil.Amount(1 * 10e8)
+	const channelBalance = monautil.Amount(1 * 10e8)
 	const csvTimeout = uint32(5)
 
 	// We also set up set some resources for the commitment transaction.

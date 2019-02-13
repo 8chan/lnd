@@ -11,7 +11,7 @@ import (
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/lnd/keychain"
 )
 
@@ -136,7 +136,7 @@ func TestHTLCSenderSpendValidation(t *testing.T) {
 		testWalletPrivKey)
 	bobKeyPriv, bobKeyPub := btcec.PrivKeyFromBytes(btcec.S256(),
 		bobsPrivKey)
-	paymentAmt := btcutil.Amount(1 * 10e8)
+	paymentAmt := monautil.Amount(1 * 10e8)
 
 	aliceLocalKey := TweakPubKey(aliceKeyPub, commitPoint)
 	bobLocalKey := TweakPubKey(bobKeyPub, commitPoint)
@@ -390,7 +390,7 @@ func TestHTLCReceiverSpendValidation(t *testing.T) {
 		testWalletPrivKey)
 	bobKeyPriv, bobKeyPub := btcec.PrivKeyFromBytes(btcec.S256(),
 		bobsPrivKey)
-	paymentAmt := btcutil.Amount(1 * 10e8)
+	paymentAmt := monautil.Amount(1 * 10e8)
 	cltvTimeout := uint32(8)
 
 	aliceLocalKey := TweakPubKey(aliceKeyPub, commitPoint)
@@ -621,7 +621,7 @@ func TestSecondLevelHtlcSpends(t *testing.T) {
 	t.Parallel()
 
 	// We'll start be creating a creating a 2BTC HTLC.
-	const htlcAmt = btcutil.Amount(2 * 10e8)
+	const htlcAmt = monautil.Amount(2 * 10e8)
 
 	// In all of our scenarios, the CSV timeout to claim a self output will
 	// be 5 blocks.

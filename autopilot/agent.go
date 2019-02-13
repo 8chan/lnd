@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/wakiyamap/monad/btcec"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/lnwire"
 )
@@ -48,7 +48,7 @@ type Config struct {
 
 	// WalletBalance is a function closure that should return the current
 	// available balance of the backing wallet.
-	WalletBalance func() (btcutil.Amount, error)
+	WalletBalance func() (monautil.Amount, error)
 
 	// Graph is an abstract channel graph that the Heuristic and the Agent
 	// will use to make decisions w.r.t channel allocation and placement
@@ -146,7 +146,7 @@ type Agent struct {
 	// totalBalance is the total number of satoshis the backing wallet is
 	// known to control at any given instance. This value will be updated
 	// when the agent receives external balance update signals.
-	totalBalance btcutil.Amount
+	totalBalance monautil.Amount
 
 	// failedNodes lists nodes that we've previously attempted to initiate
 	// channels with, but didn't succeed.
@@ -514,7 +514,7 @@ func (a *Agent) controller() {
 
 // openChans queries the agent's heuristic for a set of channel candidates, and
 // attempts to open channels to them.
-func (a *Agent) openChans(availableFunds btcutil.Amount, numChans uint32,
+func (a *Agent) openChans(availableFunds monautil.Amount, numChans uint32,
 	totalChans []Channel) error {
 
 	// We're to attempt an attachment so we'll obtain the set of

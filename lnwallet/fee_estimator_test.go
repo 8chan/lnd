@@ -3,7 +3,7 @@ package lnwallet_test
 import (
 	"testing"
 
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/lnd/lnwallet"
 )
 
@@ -29,7 +29,7 @@ func TestFeeRateTypes(t *testing.T) {
 
 		// The resulting transaction fee should be the same when using
 		// both rates.
-		expectedFee := btcutil.Amount(feePerKw * weight / 1000)
+		expectedFee := monautil.Amount(feePerKw * weight / 1000)
 		fee1 := feePerKw.FeeForWeight(weight)
 		if fee1 != expectedFee {
 			t.Fatalf("expected fee of %d sats, got %d sats",
@@ -53,7 +53,7 @@ func TestFeeRateTypes(t *testing.T) {
 
 		// The resulting transaction fee should be the same when using
 		// both rates.
-		expectedFee := btcutil.Amount(feePerKB * vsize / 1000)
+		expectedFee := monautil.Amount(feePerKB * vsize / 1000)
 		fee1 := feePerKB.FeeForVSize(vsize)
 		if fee1 != expectedFee {
 			t.Fatalf("expected fee of %d sats, got %d sats",

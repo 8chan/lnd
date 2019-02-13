@@ -19,7 +19,7 @@ import (
 	"github.com/wakiyamap/monad/rpcclient"
 	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/monawallet/chain"
 	"github.com/wakiyamap/monawallet/walletdb"
 	_ "github.com/wakiyamap/monawallet/walletdb/bdb" // Required to register the boltdb walletdb implementation.
@@ -40,7 +40,7 @@ var (
 	}
 
 	privKey, pubKey = btcec.PrivKeyFromBytes(btcec.S256(), testPrivKey)
-	addrPk, _       = btcutil.NewAddressPubKey(pubKey.SerializeCompressed(),
+	addrPk, _       = monautil.NewAddressPubKey(pubKey.SerializeCompressed(),
 		netParams)
 	testAddr = addrPk.AddressPubKeyHash()
 
@@ -49,7 +49,7 @@ var (
 
 func waitForMempoolTx(r *rpctest.Harness, txid *chainhash.Hash) error {
 	var found bool
-	var tx *btcutil.Tx
+	var tx *monautil.Tx
 	var err error
 	timeout := time.After(10 * time.Second)
 	for !found {
@@ -481,7 +481,7 @@ func testFilterSingleBlock(node *rpctest.Harness, chainView FilteredChainView,
 	if err != nil {
 		t.Fatalf("unable to create spending tx: %v", err)
 	}
-	txns := []*btcutil.Tx{btcutil.NewTx(spendingTx1), btcutil.NewTx(spendingTx2)}
+	txns := []*monautil.Tx{monautil.NewTx(spendingTx1), monautil.NewTx(spendingTx2)}
 	block, err := node.GenerateAndSubmitBlock(txns, 11, time.Time{})
 	if err != nil {
 		t.Fatalf("unable to generate block: %v", err)

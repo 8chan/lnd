@@ -12,7 +12,7 @@ import (
 	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/monad/connmgr"
 	"github.com/wakiyamap/monad/txscript"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/watchtower/blob"
 	"github.com/wakiyamap/lnd/watchtower/wtdb"
@@ -50,7 +50,7 @@ type Config struct {
 
 	// NewAddress is used to generate reward addresses, where a cut of
 	// successfully sent funds can be received.
-	NewAddress func() (btcutil.Address, error)
+	NewAddress func() (monautil.Address, error)
 }
 
 // Server houses the state required to handle watchtower peers. It's primary job

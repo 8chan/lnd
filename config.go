@@ -19,7 +19,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 	flags "github.com/jessevdk/go-flags"
 	"github.com/wakiyamap/lnd/build"
 	"github.com/wakiyamap/lnd/htlcswitch/hodl"
@@ -74,7 +74,7 @@ const (
 )
 
 var (
-	defaultLndDir     = btcutil.AppDataDir("lnd", false)
+	defaultLndDir     = monautil.AppDataDir("lnd", false)
 	defaultConfigFile = filepath.Join(defaultLndDir, defaultConfigFilename)
 	defaultDataDir    = filepath.Join(defaultLndDir, defaultDataDirname)
 	defaultLogDir     = filepath.Join(defaultLndDir, defaultLogDirname)
@@ -82,14 +82,14 @@ var (
 	defaultTLSCertPath = filepath.Join(defaultLndDir, defaultTLSCertFilename)
 	defaultTLSKeyPath  = filepath.Join(defaultLndDir, defaultTLSKeyFilename)
 
-	defaultBtcdDir         = btcutil.AppDataDir("btcd", false)
+	defaultBtcdDir         = monautil.AppDataDir("btcd", false)
 	defaultBtcdRPCCertFile = filepath.Join(defaultBtcdDir, "rpc.cert")
 
-	defaultMonadDir         = btcutil.AppDataDir("monad", false)
+	defaultMonadDir         = monautil.AppDataDir("monad", false)
 	defaultMonadRPCCertFile = filepath.Join(defaultMonadDir, "rpc.cert")
 
-	defaultBitcoindDir  = btcutil.AppDataDir("bitcoin", false)
-	defaultMonacoindDir = btcutil.AppDataDir("monacoin", false)
+	defaultBitcoindDir  = monautil.AppDataDir("bitcoin", false)
+	defaultMonacoindDir = monautil.AppDataDir("monacoin", false)
 
 	defaultTorSOCKS   = net.JoinHostPort("localhost", strconv.Itoa(defaultTorSOCKSPort))
 	defaultTorDNS     = net.JoinHostPort(defaultTorDNSHost, strconv.Itoa(defaultTorDNSPort))

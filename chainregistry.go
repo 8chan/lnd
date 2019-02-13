@@ -14,7 +14,7 @@ import (
 
 	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/monad/rpcclient"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/monawallet/chain"
 	"github.com/wakiyamap/monawallet/wallet"
 	"github.com/wakiyamap/monawallet/walletdb"
@@ -43,7 +43,7 @@ const (
 	defaultMonacoinBaseFeeMSat   = lnwire.MilliSatoshi(1000)
 	defaultMonacoinFeeRate       = lnwire.MilliSatoshi(1)
 	defaultMonacoinTimeLockDelta = 960
-	defaultMonacoinDustLimit     = btcutil.Amount(54600)
+	defaultMonacoinDustLimit     = monautil.Amount(54600)
 
 	// defaultBitcoinStaticFeePerKW is the fee rate of 50 sat/vbyte
 	// expressed in sat/kw.

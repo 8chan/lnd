@@ -8,7 +8,7 @@ import (
 	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/monad/wire"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/lnd/lnwallet"
 )
 
@@ -188,7 +188,7 @@ var sweepScript = []byte{
 	0xe, 0x6e, 0xf8, 0xef,
 }
 
-var deliveryAddr = func() btcutil.Address {
+var deliveryAddr = func() monautil.Address {
 	_, addrs, _, err := txscript.ExtractPkScriptAddrs(
 		sweepScript, &chaincfg.TestNet3Params,
 	)
