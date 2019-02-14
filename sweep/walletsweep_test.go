@@ -190,7 +190,7 @@ var sweepScript = []byte{
 
 var deliveryAddr = func() monautil.Address {
 	_, addrs, _, err := txscript.ExtractPkScriptAddrs(
-		sweepScript, &chaincfg.TestNet3Params,
+		sweepScript, &chaincfg.TestNet4Params,
 	)
 	if err != nil {
 		panic(err)

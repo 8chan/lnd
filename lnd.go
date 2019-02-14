@@ -112,7 +112,7 @@ func lndMain() error {
 
 	var network string
 	switch {
-	case cfg.Bitcoin.TestNet3 || cfg.Monacoin.TestNet3:
+	case cfg.Bitcoin.TestNet4 || cfg.Monacoin.TestNet4:
 		network = "testnet"
 
 	case cfg.Bitcoin.MainNet || cfg.Monacoin.MainNet:

@@ -662,7 +662,7 @@ func TestParseFallbackAddr(t *testing.T) {
 		},
 		{
 			data:   testAddrTestnetDataWithVersion,
-			net:    &chaincfg.TestNet3Params,
+			net:    &chaincfg.TestNet4Params,
 			valid:  true,
 			result: testAddrTestnet,
 		},

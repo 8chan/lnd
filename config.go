@@ -103,7 +103,7 @@ type chainConfig struct {
 	Node string `long:"node" description:"The blockchain interface to use." choice:"btcd" choice:"bitcoind" choice:"neutrino" choice:"monad" choice:"monacoind"`
 
 	MainNet  bool `long:"mainnet" description:"Use the main network"`
-	TestNet3 bool `long:"testnet" description:"Use the test network"`
+	TestNet4 bool `long:"testnet" description:"Use the test network"`
 	SimNet   bool `long:"simnet" description:"Use the simulation test network"`
 	RegTest  bool `long:"regtest" description:"Use the regression test network"`
 
@@ -587,7 +587,7 @@ func loadConfig() (*config, error) {
 			numNets++
 			monaParams = monacoinMainNetParams
 		}
-		if cfg.Monacoin.TestNet3 {
+		if cfg.Monacoin.TestNet4 {
 			numNets++
 			monaParams = monacoinTestNetParams
 		}
@@ -669,7 +669,7 @@ func loadConfig() (*config, error) {
 			numNets++
 			activeNetParams = bitcoinMainNetParams
 		}
-		if cfg.Bitcoin.TestNet3 {
+		if cfg.Bitcoin.TestNet4 {
 			numNets++
 			activeNetParams = bitcoinTestNetParams
 		}

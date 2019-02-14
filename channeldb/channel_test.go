@@ -23,7 +23,7 @@ import (
 )
 
 var (
-	netParams = &chaincfg.TestNet3Params
+	netParams = &chaincfg.TestNet4Params
 
 	key = [chainhash.HashSize]byte{
 		0x81, 0xb6, 0x37, 0xd8, 0xfc, 0xd2, 0xc6, 0xda,

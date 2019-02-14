@@ -23,7 +23,7 @@ import (
 var (
 	// addr is the server's reward address given to watchtower clients.
 	addr, _ = monautil.DecodeAddress(
-		"mrX9vMRYLfVy1BnZbc5gZjuyaqH3ZW2ZHz", &chaincfg.TestNet3Params,
+		"mrX9vMRYLfVy1BnZbc5gZjuyaqH3ZW2ZHz", &chaincfg.TestNet4Params,
 	)
 
 	addrScript, _ = txscript.PayToAddrScript(addr)

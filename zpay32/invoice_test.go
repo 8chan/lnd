@@ -42,7 +42,7 @@ var (
 	testExpiry0  = time.Duration(0) * time.Second
 	testExpiry60 = time.Duration(60) * time.Second
 
-	testAddrTestnet, _       = monautil.DecodeAddress("mk2QpYatsKicvFVuTAQLBryyccRXMUaGHP", &chaincfg.TestNet3Params)
+	testAddrTestnet, _       = monautil.DecodeAddress("mk2QpYatsKicvFVuTAQLBryyccRXMUaGHP", &chaincfg.TestNet4Params)
 	testRustyAddr, _         = monautil.DecodeAddress("1RustyRX2oai4EYYDpQGWvEL62BBGqN9T", &chaincfg.MainNetParams)
 	testAddrMainnetP2SH, _   = monautil.DecodeAddress("3EktnHQD7RiAE6uzMj2ZifT9YgRrkSgzQX", &chaincfg.MainNetParams)
 	testAddrMainnetP2WPKH, _ = monautil.DecodeAddress("bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4", &chaincfg.MainNetParams)
@@ -106,7 +106,7 @@ func init() {
 	// Initialize monacoin testnet and mainnet params by applying key fields
 	// to copies of bitcoin params.
 	// TODO(sangaman): create an interface for chaincfg.params
-	monaTestNetParams = chaincfg.TestNet3Params
+	monaTestNetParams = chaincfg.TestNet4Params
 	monaTestNetParams.Net = wire.BitcoinNet(monacoinCfg.TestNet4Params.Net)
 	monaTestNetParams.Bech32HRPSegwit = monacoinCfg.TestNet4Params.Bech32HRPSegwit
 	monaMainNetParams = chaincfg.MainNetParams
@@ -385,7 +385,7 @@ func TestDecodeEncode(t *testing.T) {
 			valid:          true,
 			decodedInvoice: func() *Invoice {
 				return &Invoice{
-					Net:             &chaincfg.TestNet3Params,
+					Net:             &chaincfg.TestNet4Params,
 					MilliSat:        &testMillisat20mBTC,
 					Timestamp:       time.Unix(1496314658, 0),
 					PaymentHash:     &testPaymentHash,
@@ -538,7 +538,7 @@ func TestDecodeEncode(t *testing.T) {
 			valid:          false,
 			decodedInvoice: func() *Invoice {
 				return &Invoice{
-					Net:         &chaincfg.TestNet3Params,
+					Net:         &chaincfg.TestNet4Params,
 					MilliSat:    &testMillisat24BTC,
 					Timestamp:   time.Unix(1503429093, 0),
 					PaymentHash: &testPaymentHash,

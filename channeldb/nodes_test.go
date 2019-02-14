@@ -35,7 +35,7 @@ func TestLinkNodeEncodeDecode(t *testing.T) {
 	// Create two fresh link node instances with the above dummy data, then
 	// fully sync both instances to disk.
 	node1 := cdb.NewLinkNode(wire.MainNet, pub1, addr1)
-	node2 := cdb.NewLinkNode(wire.TestNet3, pub2, addr2)
+	node2 := cdb.NewLinkNode(wire.TestNet4, pub2, addr2)
 	if err := node1.Sync(); err != nil {
 		t.Fatalf("unable to sync node: %v", err)
 	}
@@ -121,7 +121,7 @@ func TestDeleteLinkNode(t *testing.T) {
 		IP:   net.ParseIP("127.0.0.1"),
 		Port: 1337,
 	}
-	linkNode := cdb.NewLinkNode(wire.TestNet3, pubKey, addr)
+	linkNode := cdb.NewLinkNode(wire.TestNet4, pubKey, addr)
 	if err := linkNode.Sync(); err != nil {
 		t.Fatalf("unable to write link node to db: %v", err)
 	}

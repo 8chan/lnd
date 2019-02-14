@@ -33,7 +33,7 @@ type monacoinNetParams struct {
 // bitcoinTestNetParams contains parameters specific to the 3rd version of the
 // test network.
 var bitcoinTestNetParams = bitcoinNetParams{
-	Params:   &bitcoinCfg.TestNet3Params,
+	Params:   &bitcoinCfg.TestNet4Params,
 	rpcPort:  "18334",
 	CoinType: keychain.CoinTypeTestnet,
 }
@@ -121,7 +121,8 @@ func applyMonacoinParams(params *bitcoinNetParams, monacoinParams *monacoinNetPa
 // parameter configuration.
 func isTestnet(params *bitcoinNetParams) bool {
 	switch params.Params.Net {
-	case bitcoinWire.TestNet3, bitcoinWire.BitcoinNet(monacoinWire.TestNet4):
+	// case bitcoinWire.TestNet4, bitcoinWire.BitcoinNet(monacoinWire.TestNet4):
+	case bitcoinWire.BitcoinNet(monacoinWire.TestNet4):
 		return true
 	default:
 		return false
