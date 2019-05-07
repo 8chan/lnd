@@ -1,7 +1,7 @@
 package wtserver
 
 import (
-	"github.com/btcsuite/btcd/txscript"
+	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/lnd/watchtower/blob"
 	"github.com/wakiyamap/lnd/watchtower/wtdb"
 	"github.com/wakiyamap/lnd/watchtower/wtpolicy"

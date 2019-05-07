@@ -7,7 +7,7 @@ import (
 	"encoding/hex"
 	"sync/atomic"
 
-	"github.com/btcsuite/btcd/btcec"
+	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/lnd/autopilot"
 	"github.com/wakiyamap/lnd/lnrpc"
 	"google.golang.org/grpc"

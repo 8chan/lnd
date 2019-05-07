@@ -8,8 +8,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/btcsuite/btcd/btcec"
-	"github.com/btcsuite/btcd/txscript"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/txscript"
 	"github.com/wakiyamap/lnd/input"
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/watchtower/blob"

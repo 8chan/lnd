@@ -8,10 +8,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/btcsuite/btcd/btcec"
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/btcsuite/btcd/connmgr"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/connmgr"
+	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/watchtower/wtdb"
 	"github.com/wakiyamap/lnd/watchtower/wtwire"
@@ -51,7 +51,7 @@ type Config struct {
 
 	// NewAddress is used to generate reward addresses, where a cut of
 	// successfully sent funds can be received.
-	NewAddress func() (btcutil.Address, error)
+	NewAddress func() (monautil.Address, error)
 
 	// ChainHash identifies the network that the server is watching.
 	ChainHash chainhash.Hash

@@ -8,7 +8,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/btcsuite/btcd/wire"
+	"github.com/wakiyamap/monad/wire"
 	"github.com/coreos/bbolt"
 	"github.com/wakiyamap/lnd/lntypes"
 	"github.com/wakiyamap/lnd/lnwire"

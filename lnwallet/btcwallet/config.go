@@ -4,29 +4,29 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/btcsuite/btcd/wire"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monad/chaincfg"
+	"github.com/wakiyamap/monad/wire"
+	"github.com/wakiyamap/monautil"
 
-	"github.com/btcsuite/btcwallet/chain"
-	"github.com/btcsuite/btcwallet/wallet"
+	"github.com/wakiyamap/monawallet/chain"
+	"github.com/wakiyamap/monawallet/wallet"
 
 	// This is required to register bdb as a valid walletdb driver. In the
 	// init function of the package, it registers itself. The import is used
 	// to activate the side effects w/o actually binding the package name to
 	// a file-level variable.
-	_ "github.com/btcsuite/btcwallet/walletdb/bdb"
+	_ "github.com/wakiyamap/monawallet/walletdb/bdb"
 )
 
 var (
-	lnwalletHomeDir = btcutil.AppDataDir("lnwallet", false)
+	lnwalletHomeDir = monautil.AppDataDir("lnwallet", false)
 	defaultDataDir  = lnwalletHomeDir
 
 	defaultLogFilename = "lnwallet.log"
 	defaultLogDirname  = "logs"
 	defaultLogDir      = filepath.Join(lnwalletHomeDir, defaultLogDirname)
 
-	btcdHomeDir        = btcutil.AppDataDir("btcd", false)
+	btcdHomeDir        = monautil.AppDataDir("btcd", false)
 	btcdHomedirCAFile  = filepath.Join(btcdHomeDir, "rpc.cert")
 	defaultRPCKeyFile  = filepath.Join(lnwalletHomeDir, "rpc.key")
 	defaultRPCCertFile = filepath.Join(lnwalletHomeDir, "rpc.cert")
@@ -102,7 +102,7 @@ func NetworkDir(dataDir string, chainParams *chaincfg.Params) string {
 	// parameters will likely be switched to being named "testnet3" in the
 	// future.  This is done to future proof that change, and an upgrade
 	// plan to move the testnet3 data directory can be worked out later.
-	if chainParams.Net == wire.TestNet3 {
+	if chainParams.Net == wire.TestNet4 {
 		netname = "testnet"
 	}
 

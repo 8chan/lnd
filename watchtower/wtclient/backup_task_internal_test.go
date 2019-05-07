@@ -7,11 +7,11 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/btcsuite/btcd/btcec"
-	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/btcsuite/btcd/txscript"
-	"github.com/btcsuite/btcd/wire"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/chaincfg"
+	"github.com/wakiyamap/monad/txscript"
+	"github.com/wakiyamap/monad/wire"
+	"github.com/wakiyamap/monautil"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/input"
 	"github.com/wakiyamap/lnd/keychain"
@@ -65,7 +65,7 @@ type backupTaskTest struct {
 	breachInfo       *lnwallet.BreachRetribution
 	expToLocalInput  input.Input
 	expToRemoteInput input.Input
-	expTotalAmt      btcutil.Amount
+	expTotalAmt      monautil.Amount
 	expSweepAmt      int64
 	expRewardAmt     int64
 	expRewardScript  []byte
@@ -201,7 +201,7 @@ func genTaskTest(
 		breachInfo:       breachInfo,
 		expToLocalInput:  toLocalInput,
 		expToRemoteInput: toRemoteInput,
-		expTotalAmt:      btcutil.Amount(toLocalAmt + toRemoteAmt),
+		expTotalAmt:      monautil.Amount(toLocalAmt + toRemoteAmt),
 		expSweepAmt:      expSweepAmt,
 		expRewardAmt:     expRewardAmt,
 		expRewardScript:  rewardScript,
@@ -224,7 +224,7 @@ var (
 
 	blobTypeCommitReward = (blob.FlagCommitOutputs | blob.FlagReward).Type()
 
-	addr, _ = btcutil.DecodeAddress(
+	addr, _ = monautil.DecodeAddress(
 		"mrX9vMRYLfVy1BnZbc5gZjuyaqH3ZW2ZHz", &chaincfg.TestNet3Params,
 	)
 

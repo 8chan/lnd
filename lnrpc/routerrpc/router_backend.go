@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/lnd/lnrpc"
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/routing"
@@ -24,7 +24,7 @@ type RouterBackend struct {
 
 	// FetchChannelCapacity is a closure that we'll use the fetch the total
 	// capacity of a channel to populate in responses.
-	FetchChannelCapacity func(chanID uint64) (btcutil.Amount, error)
+	FetchChannelCapacity func(chanID uint64) (monautil.Amount, error)
 
 	// FindRoutes is a closure that abstracts away how we locate/query for
 	// routes.
@@ -85,7 +85,7 @@ func (r *RouterBackend) QueryRoutes(ctx context.Context,
 	// Currently, within the bootstrap phase of the network, we limit the
 	// largest payment size allotted to (2^32) - 1 mSAT or 4.29 million
 	// satoshis.
-	amt := btcutil.Amount(in.Amt)
+	amt := monautil.Amount(in.Amt)
 	amtMSat := lnwire.NewMSatFromSatoshis(amt)
 	if amtMSat > r.MaxPaymentMSat {
 		return nil, fmt.Errorf("payment of %v is too large, max payment "+
@@ -183,7 +183,7 @@ func calculateFeeLimit(feeLimit *lnrpc.FeeLimit,
 	switch feeLimit.GetLimit().(type) {
 	case *lnrpc.FeeLimit_Fixed:
 		return lnwire.NewMSatFromSatoshis(
-			btcutil.Amount(feeLimit.GetFixed()),
+			monautil.Amount(feeLimit.GetFixed()),
 		)
 	case *lnrpc.FeeLimit_Percent:
 		return amount * lnwire.MilliSatoshi(feeLimit.GetPercent()) / 100

@@ -8,7 +8,7 @@ import (
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/invoices"
 
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/lnd/lntypes"
 )
 
@@ -212,7 +212,7 @@ func (h *htlcIncomingContestResolver) report() *ContractReport {
 
 	finalAmt := h.htlcAmt.ToSatoshis()
 	if h.htlcResolution.SignedSuccessTx != nil {
-		finalAmt = btcutil.Amount(
+		finalAmt = monautil.Amount(
 			h.htlcResolution.SignedSuccessTx.TxOut[0].Value,
 		)
 	}

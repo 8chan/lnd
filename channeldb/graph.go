@@ -13,11 +13,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/btcsuite/btcd/btcec"
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/btcsuite/btcd/txscript"
-	"github.com/btcsuite/btcd/wire"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/txscript"
+	"github.com/wakiyamap/monad/wire"
+	"github.com/wakiyamap/monautil"
 	"github.com/coreos/bbolt"
 	"github.com/wakiyamap/lnd/lnwire"
 )
@@ -2319,7 +2319,7 @@ type ChannelEdgeInfo struct {
 
 	// Capacity is the total capacity of the channel, this is determined by
 	// the value output in the outpoint that created this channel.
-	Capacity btcutil.Amount
+	Capacity monautil.Amount
 
 	// ExtraOpaqueData is the set of data that was appended to this
 	// message, some of which we may not actually know how to iterate or

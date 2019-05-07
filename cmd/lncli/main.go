@@ -14,7 +14,7 @@ import (
 
 	macaroon "gopkg.in/macaroon.v2"
 
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 	"github.com/urfave/cli"
 	"github.com/wakiyamap/lnd/build"
 	"github.com/wakiyamap/lnd/lncfg"
@@ -35,7 +35,7 @@ const (
 )
 
 var (
-	defaultLndDir      = btcutil.AppDataDir("lnd", false)
+	defaultLndDir      = monautil.AppDataDir("lnd", false)
 	defaultTLSCertPath = filepath.Join(defaultLndDir, defaultTLSCertFilename)
 
 	// maxMsgRecvSize is the largest message our client will receive. We

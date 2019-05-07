@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/btcsuite/btcd/btcec"
-	"github.com/btcsuite/btcd/wire"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/wire"
+	"github.com/wakiyamap/monautil"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/autopilot"
 	"github.com/wakiyamap/lnd/lnwire"
@@ -80,7 +80,7 @@ type chanController struct {
 // specified amount. This function should un-block immediately after the
 // funding transaction that marks the channel open has been broadcast.
 func (c *chanController) OpenChannel(target *btcec.PublicKey,
-	amt btcutil.Amount) error {
+	amt monautil.Amount) error {
 
 	// With the connection established, we'll now establish our connection
 	// to the target peer, waiting for the first update before we exit.
@@ -121,11 +121,11 @@ func (c *chanController) CloseChannel(chanPoint *wire.OutPoint) error {
 	return nil
 }
 func (c *chanController) SpliceIn(chanPoint *wire.OutPoint,
-	amt btcutil.Amount) (*autopilot.Channel, error) {
+	amt monautil.Amount) (*autopilot.Channel, error) {
 	return nil, nil
 }
 func (c *chanController) SpliceOut(chanPoint *wire.OutPoint,
-	amt btcutil.Amount) (*autopilot.Channel, error) {
+	amt monautil.Amount) (*autopilot.Channel, error) {
 	return nil, nil
 }
 
@@ -142,8 +142,8 @@ func initAutoPilot(svr *server, cfg *autoPilotConfig) (*autopilot.ManagerCfg, er
 
 	// Set up the constraints the autopilot heuristics must adhere to.
 	atplConstraints := autopilot.NewConstraints(
-		btcutil.Amount(cfg.MinChannelSize),
-		btcutil.Amount(cfg.MaxChannelSize),
+		monautil.Amount(cfg.MinChannelSize),
+		monautil.Amount(cfg.MaxChannelSize),
 		uint16(cfg.MaxChannels),
 		10,
 		cfg.Allocation,
@@ -171,7 +171,7 @@ func initAutoPilot(svr *server, cfg *autoPilotConfig) (*autopilot.ManagerCfg, er
 			private:  cfg.Private,
 			minConfs: cfg.MinConfs,
 		},
-		WalletBalance: func() (btcutil.Amount, error) {
+		WalletBalance: func() (monautil.Amount, error) {
 			return svr.cc.wallet.ConfirmedBalance(cfg.MinConfs)
 		},
 		Graph:       autopilot.ChannelGraphFromDatabase(svr.chanDB.ChannelGraph()),

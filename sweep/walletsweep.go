@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/btcsuite/btcd/txscript"
-	"github.com/btcsuite/btcd/wire"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monad/txscript"
+	"github.com/wakiyamap/monad/wire"
+	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/lnd/input"
 	"github.com/wakiyamap/lnd/lnwallet"
 )
@@ -150,7 +150,7 @@ type WalletSweepPackage struct {
 // target fee rate, and will use the utxoSource and outpointLocker as sources
 // for wallet funds.
 func CraftSweepAllTx(feeRate lnwallet.SatPerKWeight, blockHeight uint32,
-	deliveryAddr btcutil.Address, coinSelectLocker CoinSelectionLocker,
+	deliveryAddr monautil.Address, coinSelectLocker CoinSelectionLocker,
 	utxoSource UtxoSource, outpointLocker OutpointLocker,
 	feeEstimator lnwallet.FeeEstimator,
 	signer input.Signer) (*WalletSweepPackage, error) {

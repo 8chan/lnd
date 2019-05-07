@@ -6,10 +6,10 @@ import (
 	"io"
 	"net"
 
-	"github.com/btcsuite/btcd/btcec"
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/btcsuite/btcd/wire"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/wire"
+	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/keychain"
 	"github.com/wakiyamap/lnd/lnwire"
@@ -73,7 +73,7 @@ type Single struct {
 	Addresses []net.Addr
 
 	// Capacity is the size of the original channel.
-	Capacity btcutil.Amount
+	Capacity monautil.Amount
 
 	// LocalChanCfg is our local channel configuration. It contains all the
 	// information we need to re-derive the keys we used within the

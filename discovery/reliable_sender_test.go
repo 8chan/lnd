@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/btcsuite/btcd/btcec"
+	"github.com/wakiyamap/monad/btcec"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/lnpeer"
 	"github.com/wakiyamap/lnd/lntest"

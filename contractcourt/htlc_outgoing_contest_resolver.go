@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 )
 
 // htlcOutgoingContestResolver is a ContractResolver that's able to resolve an
@@ -163,7 +163,7 @@ func (h *htlcOutgoingContestResolver) report() *ContractReport {
 
 	finalAmt := h.htlcAmt.ToSatoshis()
 	if h.htlcResolution.SignedTimeoutTx != nil {
-		finalAmt = btcutil.Amount(
+		finalAmt = monautil.Amount(
 			h.htlcResolution.SignedTimeoutTx.TxOut[0].Value,
 		)
 	}

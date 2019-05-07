@@ -11,7 +11,7 @@ import (
 	"google.golang.org/grpc"
 	"gopkg.in/macaroon-bakery.v2/bakery"
 
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/lnrpc"
 	"github.com/wakiyamap/lnd/lntypes"
@@ -264,7 +264,7 @@ func (s *Server) AddHoldInvoice(ctx context.Context,
 	addInvoiceData := &AddInvoiceData{
 		Memo:            invoice.Memo,
 		Hash:            &hash,
-		Value:           btcutil.Amount(invoice.Value),
+		Value:           monautil.Amount(invoice.Value),
 		DescriptionHash: invoice.DescriptionHash,
 		Expiry:          invoice.Expiry,
 		FallbackAddr:    invoice.FallbackAddr,

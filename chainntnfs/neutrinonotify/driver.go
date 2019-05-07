@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/lightninglabs/neutrino"
+	"github.com/wakiyamap/neutrino"
 	"github.com/wakiyamap/lnd/chainntnfs"
 )
 

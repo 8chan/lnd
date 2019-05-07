@@ -3,7 +3,7 @@
 package routerrpc
 
 import (
-	"github.com/btcsuite/btcd/chaincfg"
+	"github.com/wakiyamap/monad/chaincfg"
 	"github.com/wakiyamap/lnd/macaroons"
 	"github.com/wakiyamap/lnd/routing"
 )

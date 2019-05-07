@@ -10,10 +10,10 @@ import (
 
 	prand "math/rand"
 
-	"github.com/btcsuite/btcd/btcec"
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/btcsuite/btcd/wire"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/wire"
+	"github.com/wakiyamap/monautil"
 	"github.com/go-errors/errors"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/input"
@@ -86,7 +86,7 @@ func randEdgePolicy(chanID *lnwire.ShortChannelID,
 }
 
 func createChannelEdge(ctx *testCtx, bitcoinKey1, bitcoinKey2 []byte,
-	chanValue btcutil.Amount, fundingHeight uint32) (*wire.MsgTx, *wire.OutPoint,
+	chanValue monautil.Amount, fundingHeight uint32) (*wire.MsgTx, *wire.OutPoint,
 	*lnwire.ShortChannelID, error) {
 
 	fundingTx := wire.NewMsgTx(2)

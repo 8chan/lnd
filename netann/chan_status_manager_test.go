@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/btcsuite/btcd/btcec"
-	"github.com/btcsuite/btcd/wire"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/netann"

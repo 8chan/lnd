@@ -12,13 +12,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/btcsuite/btcd/rpcclient"
-	"github.com/btcsuite/btcutil"
-	"github.com/btcsuite/btcwallet/chain"
-	"github.com/btcsuite/btcwallet/wallet"
-	"github.com/btcsuite/btcwallet/walletdb"
-	"github.com/lightninglabs/neutrino"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/rpcclient"
+	"github.com/wakiyamap/monautil"
+	"github.com/wakiyamap/monawallet/chain"
+	"github.com/wakiyamap/monawallet/wallet"
+	"github.com/wakiyamap/monawallet/walletdb"
+	"github.com/wakiyamap/neutrino"
 	"github.com/wakiyamap/lnd/chainntnfs"
 	"github.com/wakiyamap/lnd/chainntnfs/bitcoindnotify"
 	"github.com/wakiyamap/lnd/chainntnfs/btcdnotify"
@@ -43,7 +43,7 @@ const (
 	defaultMonacoinBaseFeeMSat   = lnwire.MilliSatoshi(1000)
 	defaultMonacoinFeeRate       = lnwire.MilliSatoshi(1)
 	defaultMonacoinTimeLockDelta = 960
-	defaultMonacoinDustLimit     = btcutil.Amount(54600)
+	defaultMonacoinDustLimit     = monautil.Amount(54600)
 
 	// defaultBitcoinStaticFeePerKW is the fee rate of 50 sat/vbyte
 	// expressed in sat/kw.

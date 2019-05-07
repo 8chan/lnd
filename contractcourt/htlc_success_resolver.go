@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/btcsuite/btcd/wire"
+	"github.com/wakiyamap/monad/wire"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/input"

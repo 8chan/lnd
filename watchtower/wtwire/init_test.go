@@ -3,8 +3,8 @@ package wtwire_test
 import (
 	"testing"
 
-	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/chaincfg"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/watchtower/wtwire"
 )

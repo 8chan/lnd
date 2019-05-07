@@ -11,14 +11,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/btcsuite/btcd/integration/rpctest"
-	"github.com/btcsuite/btcd/rpcclient"
-	"github.com/btcsuite/btcd/wire"
-	"github.com/btcsuite/btcutil"
-	"github.com/btcsuite/btcwallet/chain"
-	_ "github.com/btcsuite/btcwallet/walletdb/bdb" // Required to auto-register the boltdb walletdb implementation.
-	"github.com/lightninglabs/neutrino"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/integration/rpctest"
+	"github.com/wakiyamap/monad/rpcclient"
+	"github.com/wakiyamap/monad/wire"
+	"github.com/wakiyamap/monautil"
+	"github.com/wakiyamap/monawallet/chain"
+	_ "github.com/wakiyamap/monawallet/walletdb/bdb" // Required to auto-register the boltdb walletdb implementation.
+	"github.com/wakiyamap/neutrino"
 	"github.com/wakiyamap/lnd/chainntnfs"
 	"github.com/wakiyamap/lnd/chainntnfs/bitcoindnotify"
 	"github.com/wakiyamap/lnd/chainntnfs/btcdnotify"
@@ -86,7 +86,7 @@ func testSingleConfirmationNotification(miner *rpctest.Harness,
 			t.Fatalf("unable to fetch block: %v", err)
 		}
 
-		block := btcutil.NewBlock(msgBlock)
+		block := monautil.NewBlock(msgBlock)
 		specifiedTxHash, err := block.TxHash(int(confInfo.TxIndex))
 		if err != nil {
 			t.Fatalf("unable to index into block: %v", err)
@@ -587,7 +587,7 @@ func testTxConfirmedBeforeNtfnRegistration(miner *rpctest.Harness,
 		if err != nil {
 			t.Fatalf("unable to fetch block: %v", err)
 		}
-		block := btcutil.NewBlock(msgBlock)
+		block := monautil.NewBlock(msgBlock)
 		specifiedTxHash, err := block.TxHash(int(confInfo.TxIndex))
 		if err != nil {
 			t.Fatalf("unable to index into block: %v", err)

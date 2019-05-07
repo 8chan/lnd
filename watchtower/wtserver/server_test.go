@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/btcsuite/btcd/btcec"
-	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/btcsuite/btcd/txscript"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/chaincfg"
+	"github.com/wakiyamap/monad/txscript"
+	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/watchtower/blob"
 	"github.com/wakiyamap/lnd/watchtower/wtdb"
@@ -20,7 +20,7 @@ import (
 
 var (
 	// addr is the server's reward address given to watchtower clients.
-	addr, _ = btcutil.DecodeAddress(
+	addr, _ = monautil.DecodeAddress(
 		"mrX9vMRYLfVy1BnZbc5gZjuyaqH3ZW2ZHz", &chaincfg.TestNet3Params,
 	)
 
@@ -58,7 +58,7 @@ func initServer(t *testing.T, db wtserver.DB,
 		DB:           db,
 		ReadTimeout:  timeout,
 		WriteTimeout: timeout,
-		NewAddress: func() (btcutil.Address, error) {
+		NewAddress: func() (monautil.Address, error) {
 			return addr, nil
 		},
 		ChainHash: testnetChainHash,

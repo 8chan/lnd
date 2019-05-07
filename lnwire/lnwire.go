@@ -10,10 +10,10 @@ import (
 
 	"net"
 
-	"github.com/btcsuite/btcd/btcec"
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/btcsuite/btcd/wire"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/wire"
+	"github.com/wakiyamap/monautil"
 	"github.com/go-errors/errors"
 	"github.com/wakiyamap/lnd/tor"
 )
@@ -129,7 +129,7 @@ func WriteElement(w io.Writer, element interface{}) error {
 		if _, err := w.Write(b[:]); err != nil {
 			return err
 		}
-	case btcutil.Amount:
+	case monautil.Amount:
 		var b [8]byte
 		binary.BigEndian.PutUint64(b[:], uint64(e))
 		if _, err := w.Write(b[:]); err != nil {
@@ -530,12 +530,12 @@ func ReadElement(r io.Reader, element interface{}) error {
 			return err
 		}
 		*e = MilliSatoshi(int64(binary.BigEndian.Uint64(b[:])))
-	case *btcutil.Amount:
+	case *monautil.Amount:
 		var b [8]byte
 		if _, err := io.ReadFull(r, b[:]); err != nil {
 			return err
 		}
-		*e = btcutil.Amount(int64(binary.BigEndian.Uint64(b[:])))
+		*e = monautil.Amount(int64(binary.BigEndian.Uint64(b[:])))
 	case **btcec.PublicKey:
 		var b [btcec.PubKeyBytesLenCompressed]byte
 		if _, err = io.ReadFull(r, b[:]); err != nil {

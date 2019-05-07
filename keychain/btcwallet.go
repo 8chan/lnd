@@ -4,10 +4,10 @@ import (
 	"crypto/sha256"
 	"fmt"
 
-	"github.com/btcsuite/btcd/btcec"
-	"github.com/btcsuite/btcwallet/waddrmgr"
-	"github.com/btcsuite/btcwallet/wallet"
-	"github.com/btcsuite/btcwallet/walletdb"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monawallet/waddrmgr"
+	"github.com/wakiyamap/monawallet/wallet"
+	"github.com/wakiyamap/monawallet/walletdb"
 )
 
 const (

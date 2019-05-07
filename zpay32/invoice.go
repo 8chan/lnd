@@ -7,11 +7,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/btcsuite/btcd/btcec"
-	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/btcsuite/btcutil"
-	"github.com/btcsuite/btcutil/bech32"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/chaincfg"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
+	"github.com/wakiyamap/monautil"
+	"github.com/wakiyamap/monautil/bech32"
 	"github.com/wakiyamap/lnd/lnwire"
 )
 
@@ -138,7 +138,7 @@ type Invoice struct {
 	// FallbackAddr is an on-chain address that can be used for payment in
 	// case the Lightning payment fails.
 	// Optional.
-	FallbackAddr btcutil.Address
+	FallbackAddr monautil.Address
 
 	// RouteHints represents one or more different route hints. Each route
 	// hint can be individually used to reach the destination. These usually
@@ -205,7 +205,7 @@ func Expiry(expiry time.Duration) func(*Invoice) {
 // FallbackAddr is a functional option that allows callers of NewInvoice to set
 // the Invoice's fallback on-chain address that can be used for payment in case
 // the Lightning payment fails
-func FallbackAddr(fallbackAddr btcutil.Address) func(*Invoice) {
+func FallbackAddr(fallbackAddr monautil.Address) func(*Invoice) {
 	return func(i *Invoice) {
 		i.FallbackAddr = fallbackAddr
 	}
@@ -784,13 +784,13 @@ func parseMinFinalCLTVExpiry(data []byte) (*uint64, error) {
 
 // parseFallbackAddr converts the data (encoded in base32) into a fallback
 // on-chain address.
-func parseFallbackAddr(data []byte, net *chaincfg.Params) (btcutil.Address, error) {
+func parseFallbackAddr(data []byte, net *chaincfg.Params) (monautil.Address, error) {
 	// Checks if the data is empty or contains a version without an address.
 	if len(data) < 2 {
 		return nil, fmt.Errorf("empty fallback address field")
 	}
 
-	var addr btcutil.Address
+	var addr monautil.Address
 
 	version := data[0]
 	switch version {
@@ -802,9 +802,9 @@ func parseFallbackAddr(data []byte, net *chaincfg.Params) (btcutil.Address, erro
 
 		switch len(witness) {
 		case 20:
-			addr, err = btcutil.NewAddressWitnessPubKeyHash(witness, net)
+			addr, err = monautil.NewAddressWitnessPubKeyHash(witness, net)
 		case 32:
-			addr, err = btcutil.NewAddressWitnessScriptHash(witness, net)
+			addr, err = monautil.NewAddressWitnessScriptHash(witness, net)
 		default:
 			return nil, fmt.Errorf("unknown witness program length %d",
 				len(witness))
@@ -819,7 +819,7 @@ func parseFallbackAddr(data []byte, net *chaincfg.Params) (btcutil.Address, erro
 			return nil, err
 		}
 
-		addr, err = btcutil.NewAddressPubKeyHash(pubKeyHash, net)
+		addr, err = monautil.NewAddressPubKeyHash(pubKeyHash, net)
 		if err != nil {
 			return nil, err
 		}
@@ -829,7 +829,7 @@ func parseFallbackAddr(data []byte, net *chaincfg.Params) (btcutil.Address, erro
 			return nil, err
 		}
 
-		addr, err = btcutil.NewAddressScriptHashFromHash(scriptHash, net)
+		addr, err = monautil.NewAddressScriptHashFromHash(scriptHash, net)
 		if err != nil {
 			return nil, err
 		}
@@ -946,13 +946,13 @@ func writeTaggedFields(bufferBase32 *bytes.Buffer, invoice *Invoice) error {
 	if invoice.FallbackAddr != nil {
 		var version byte
 		switch addr := invoice.FallbackAddr.(type) {
-		case *btcutil.AddressPubKeyHash:
+		case *monautil.AddressPubKeyHash:
 			version = 17
-		case *btcutil.AddressScriptHash:
+		case *monautil.AddressScriptHash:
 			version = 18
-		case *btcutil.AddressWitnessPubKeyHash:
+		case *monautil.AddressWitnessPubKeyHash:
 			version = addr.WitnessVersion()
-		case *btcutil.AddressWitnessScriptHash:
+		case *monautil.AddressWitnessScriptHash:
 			version = addr.WitnessVersion()
 		default:
 			return fmt.Errorf("unknown fallback address type")

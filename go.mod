@@ -13,7 +13,7 @@ require (
 	github.com/coreos/bbolt v1.3.2
 	github.com/davecgh/go-spew v1.1.1
 	github.com/go-errors/errors v1.0.1
-	github.com/golang/protobuf v1.2.0
+	github.com/golang/protobuf v1.3.1
 	github.com/grpc-ecosystem/grpc-gateway v0.0.0-20170724004829-f2862b476edc
 	github.com/jackpal/gateway v1.0.5
 	github.com/jackpal/go-nat-pmp v0.0.0-20170405195558-28a68d0c24ad
@@ -27,7 +27,6 @@ require (
 	github.com/juju/utils v0.0.0-20180820210520-bf9cc5bdd62d // indirect
 	github.com/juju/version v0.0.0-20180108022336-b64dbd566305 // indirect
 	github.com/kkdai/bstream v0.0.0-20181106074824-b3251f7901ec
-	github.com/lightninglabs/neutrino v0.0.0-20190426010803-a655679fe131
 	github.com/lightningnetwork/lightning-onion v0.0.0-20190430041606-751fb4dd8b72
 	github.com/lightningnetwork/lnd/queue v1.0.1
 	github.com/lightningnetwork/lnd/ticker v1.0.0
@@ -35,12 +34,18 @@ require (
 	github.com/rogpeppe/fastuuid v0.0.0-20150106093220-6724a57986af // indirect
 	github.com/tv42/zbase32 v0.0.0-20160707012821-501572607d02
 	github.com/urfave/cli v1.18.0
-	github.com/wakiyamap/monad v0.0.0-20190316043608-a9a7a7c9ca5c
-	golang.org/x/crypto v0.0.0-20190211182817-74369b46fc67
-	golang.org/x/net v0.0.0-20190206173232-65e2d4e15006
-	golang.org/x/time v0.0.0-20180412165947-fbb02b2291d2
-	google.golang.org/genproto v0.0.0-20190201180003-4b09977fb922
-	google.golang.org/grpc v1.18.0
+	github.com/wakiyamap/monad v0.0.0-20190506050331-00ef2fc6ccc4
+	github.com/wakiyamap/monautil v0.0.0-20190427085431-0b7aac242e96
+	github.com/wakiyamap/monawallet v0.0.0-20190505005950-bae29c6dd296
+	github.com/wakiyamap/neutrino v0.0.0-20190506070006-33041b0468a9
+	golang.org/x/crypto v0.0.0-20190506204251-e1dfcc566284
+	golang.org/x/image v0.0.0-20190507092727-e4e5bf290fec // indirect
+	golang.org/x/net v0.0.0-20190503192946-f4e77d36d62c
+	golang.org/x/sys v0.0.0-20190507053917-2953c62de483 // indirect
+	golang.org/x/time v0.0.0-20190308202827-9d24e82272b4
+	golang.org/x/tools v0.0.0-20190506145303-2d16b83fe98c // indirect
+	google.golang.org/genproto v0.0.0-20190502173448-54afdca5d873
+	google.golang.org/grpc v1.20.1
 	gopkg.in/errgo.v1 v1.0.0 // indirect
 	gopkg.in/macaroon-bakery.v2 v2.0.1
 	gopkg.in/macaroon.v2 v2.0.0

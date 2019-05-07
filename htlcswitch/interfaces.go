@@ -1,7 +1,7 @@
 package htlcswitch
 
 import (
-	"github.com/btcsuite/btcd/wire"
+	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/invoices"
 	"github.com/wakiyamap/lnd/lnpeer"

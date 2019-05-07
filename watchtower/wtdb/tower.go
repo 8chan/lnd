@@ -5,7 +5,7 @@ import (
 	"net"
 	"sync"
 
-	"github.com/btcsuite/btcd/btcec"
+	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/lnd/lnwire"
 )
 

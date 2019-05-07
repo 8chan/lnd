@@ -3,7 +3,7 @@ package channelnotifier
 import (
 	"sync/atomic"
 
-	"github.com/btcsuite/btcd/wire"
+	"github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/subscribe"
 )

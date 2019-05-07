@@ -3,11 +3,11 @@ package lnwallet_test
 import (
 	"testing"
 
-	"github.com/btcsuite/btcd/blockchain"
-	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/btcsuite/btcd/txscript"
-	"github.com/btcsuite/btcd/wire"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monad/blockchain"
+	"github.com/wakiyamap/monad/chaincfg"
+	"github.com/wakiyamap/monad/txscript"
+	"github.com/wakiyamap/monad/wire"
+	"github.com/wakiyamap/monautil"
 
 	"github.com/wakiyamap/lnd/input"
 )
@@ -18,7 +18,7 @@ import (
 func TestTxWeightEstimator(t *testing.T) {
 	netParams := &chaincfg.MainNetParams
 
-	p2pkhAddr, err := btcutil.NewAddressPubKeyHash(
+	p2pkhAddr, err := monautil.NewAddressPubKeyHash(
 		make([]byte, 20), netParams)
 	if err != nil {
 		t.Fatalf("Failed to generate address: %v", err)
@@ -28,7 +28,7 @@ func TestTxWeightEstimator(t *testing.T) {
 		t.Fatalf("Failed to generate scriptPubKey: %v", err)
 	}
 
-	p2wkhAddr, err := btcutil.NewAddressWitnessPubKeyHash(
+	p2wkhAddr, err := monautil.NewAddressWitnessPubKeyHash(
 		make([]byte, 20), netParams)
 	if err != nil {
 		t.Fatalf("Failed to generate address: %v", err)
@@ -38,7 +38,7 @@ func TestTxWeightEstimator(t *testing.T) {
 		t.Fatalf("Failed to generate scriptPubKey: %v", err)
 	}
 
-	p2wshAddr, err := btcutil.NewAddressWitnessScriptHash(
+	p2wshAddr, err := monautil.NewAddressWitnessScriptHash(
 		make([]byte, 32), netParams)
 	if err != nil {
 		t.Fatalf("Failed to generate address: %v", err)
@@ -48,7 +48,7 @@ func TestTxWeightEstimator(t *testing.T) {
 		t.Fatalf("Failed to generate scriptPubKey: %v", err)
 	}
 
-	p2shAddr, err := btcutil.NewAddressScriptHash([]byte{0}, netParams)
+	p2shAddr, err := monautil.NewAddressScriptHash([]byte{0}, netParams)
 	if err != nil {
 		t.Fatalf("Failed to generate address: %v", err)
 	}
@@ -182,7 +182,7 @@ func TestTxWeightEstimator(t *testing.T) {
 			tx.AddTxOut(&wire.TxOut{PkScript: p2shScript})
 		}
 
-		expectedWeight := blockchain.GetTransactionWeight(btcutil.NewTx(tx))
+		expectedWeight := blockchain.GetTransactionWeight(monautil.NewTx(tx))
 		if weightEstimate.Weight() != int(expectedWeight) {
 			t.Errorf("Case %d: Got wrong weight: expected %d, got %d",
 				i, expectedWeight, weightEstimate.Weight())

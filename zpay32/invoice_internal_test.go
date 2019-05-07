@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/btcsuite/btcd/btcec"
-	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/btcsuite/btcutil"
-	"github.com/btcsuite/btcutil/bech32"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/chaincfg"
+	"github.com/wakiyamap/monautil"
+	"github.com/wakiyamap/monautil/bech32"
 	"github.com/wakiyamap/lnd/lnwire"
 )
 
@@ -649,7 +649,7 @@ func TestParseFallbackAddr(t *testing.T) {
 		data   []byte
 		net    *chaincfg.Params
 		valid  bool
-		result btcutil.Address
+		result monautil.Address
 	}{
 		{
 			data:  []byte{},

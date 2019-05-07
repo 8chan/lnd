@@ -1,10 +1,10 @@
 package lnd
 
 import (
-	"github.com/btcsuite/btcd/chaincfg"
-	bitcoinCfg "github.com/btcsuite/btcd/chaincfg"
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	bitcoinWire "github.com/btcsuite/btcd/wire"
+	"github.com/wakiyamap/monad/chaincfg"
+	bitcoinCfg "github.com/wakiyamap/monad/chaincfg"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
+	bitcoinWire "github.com/wakiyamap/monad/wire"
 	"github.com/wakiyamap/lnd/keychain"
 	monacoinCfg "github.com/wakiyamap/monad/chaincfg"
 	monacoinWire "github.com/wakiyamap/monad/wire"

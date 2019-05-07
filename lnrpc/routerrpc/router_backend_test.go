@@ -6,7 +6,7 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/routing"
 	"github.com/wakiyamap/lnd/routing/route"
@@ -111,7 +111,7 @@ func TestQueryRoutes(t *testing.T) {
 		FindRoutes:     findRoutes,
 		SelfNode:       route.Vertex{1, 2, 3},
 		FetchChannelCapacity: func(chanID uint64) (
-			btcutil.Amount, error) {
+			monautil.Amount, error) {
 
 			return 1, nil
 		},

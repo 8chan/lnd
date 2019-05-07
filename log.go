@@ -6,10 +6,10 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/btcsuite/btcd/connmgr"
+	"github.com/wakiyamap/monad/connmgr"
 	"github.com/btcsuite/btclog"
 	"github.com/jrick/logrotate/rotator"
-	"github.com/lightninglabs/neutrino"
+	"github.com/wakiyamap/neutrino"
 	sphinx "github.com/lightningnetwork/lightning-onion"
 	"github.com/wakiyamap/lnd/autopilot"
 	"github.com/wakiyamap/lnd/build"

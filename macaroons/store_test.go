@@ -11,7 +11,7 @@ import (
 
 	"github.com/wakiyamap/lnd/macaroons"
 
-	"github.com/btcsuite/btcwallet/snacl"
+	"github.com/wakiyamap/monawallet/snacl"
 )
 
 func TestStore(t *testing.T) {

@@ -3,7 +3,7 @@ package wtdb
 import (
 	"errors"
 
-	"github.com/btcsuite/btcd/btcec"
+	"github.com/wakiyamap/monad/btcec"
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/watchtower/wtpolicy"
 )

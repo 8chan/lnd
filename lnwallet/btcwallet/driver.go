@@ -3,7 +3,7 @@ package btcwallet
 import (
 	"fmt"
 
-	"github.com/btcsuite/btcwallet/chain"
+	"github.com/wakiyamap/monawallet/chain"
 	"github.com/wakiyamap/lnd/lnwallet"
 )
 

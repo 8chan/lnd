@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/btcsuite/btcd/rpcclient"
-	"github.com/lightninglabs/neutrino"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/rpcclient"
+	"github.com/wakiyamap/neutrino"
 	"github.com/wakiyamap/lnd/chainntnfs"
 )
 

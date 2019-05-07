@@ -7,11 +7,11 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/btcsuite/btcd/btcjson"
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/btcsuite/btcd/rpcclient"
-	"github.com/btcsuite/btcd/wire"
-	"github.com/btcsuite/btcutil"
+	"github.com/wakiyamap/monad/btcjson"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/rpcclient"
+	"github.com/wakiyamap/monad/wire"
+	"github.com/wakiyamap/monautil"
 	"github.com/wakiyamap/lnd/channeldb"
 )
 
@@ -151,7 +151,7 @@ func (b *BtcdFilteredChainView) Stop() error {
 // end of the main chain. Based on our current chain filter, the block may or
 // may not include any relevant transactions.
 func (b *BtcdFilteredChainView) onFilteredBlockConnected(height int32,
-	header *wire.BlockHeader, txns []*btcutil.Tx) {
+	header *wire.BlockHeader, txns []*monautil.Tx) {
 
 	mtxs := make([]*wire.MsgTx, len(txns))
 	b.filterMtx.Lock()
@@ -334,7 +334,7 @@ func (b *BtcdFilteredChainView) chainFilterer() {
 			// Apply the new TX filter to btcd, which will cause
 			// all following notifications from and calls to it
 			// return blocks filtered with the new filter.
-			b.btcdConn.LoadTxFilter(false, []btcutil.Address{},
+			b.btcdConn.LoadTxFilter(false, []monautil.Address{},
 				update.newUtxos)
 
 			// All blocks gotten after we loaded the filter will

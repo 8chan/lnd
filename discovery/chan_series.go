@@ -3,7 +3,7 @@ package discovery
 import (
 	"time"
 
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
 	"github.com/wakiyamap/lnd/channeldb"
 	"github.com/wakiyamap/lnd/lnwire"
 	"github.com/wakiyamap/lnd/routing/route"

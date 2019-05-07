@@ -13,17 +13,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/btcsuite/btcd/btcec"
-	"github.com/btcsuite/btcd/btcjson"
-	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/btcsuite/btcd/integration/rpctest"
-	"github.com/btcsuite/btcd/txscript"
-	"github.com/btcsuite/btcd/wire"
-	"github.com/btcsuite/btcutil"
-	"github.com/btcsuite/btcwallet/chain"
-	"github.com/btcsuite/btcwallet/walletdb"
-	"github.com/lightninglabs/neutrino"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/btcjson"
+	"github.com/wakiyamap/monad/chaincfg"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/integration/rpctest"
+	"github.com/wakiyamap/monad/txscript"
+	"github.com/wakiyamap/monad/wire"
+	"github.com/wakiyamap/monautil"
+	"github.com/wakiyamap/monawallet/chain"
+	"github.com/wakiyamap/monawallet/walletdb"
+	"github.com/wakiyamap/neutrino"
 )
 
 var (
@@ -45,8 +45,8 @@ func randPubKeyHashScript() ([]byte, *btcec.PrivateKey, error) {
 		return nil, nil, err
 	}
 
-	pubKeyHash := btcutil.Hash160(privKey.PubKey().SerializeCompressed())
-	addrScript, err := btcutil.NewAddressPubKeyHash(pubKeyHash, NetParams)
+	pubKeyHash := monautil.Hash160(privKey.PubKey().SerializeCompressed())
+	addrScript, err := monautil.NewAddressPubKeyHash(pubKeyHash, NetParams)
 	if err != nil {
 		return nil, nil, err
 	}

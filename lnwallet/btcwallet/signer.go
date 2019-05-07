@@ -1,14 +1,14 @@
 package btcwallet
 
 import (
-	"github.com/btcsuite/btcd/btcec"
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
-	"github.com/btcsuite/btcd/txscript"
-	"github.com/btcsuite/btcd/wire"
-	"github.com/btcsuite/btcutil"
-	"github.com/btcsuite/btcwallet/waddrmgr"
-	base "github.com/btcsuite/btcwallet/wallet"
-	"github.com/btcsuite/btcwallet/walletdb"
+	"github.com/wakiyamap/monad/btcec"
+	"github.com/wakiyamap/monad/chaincfg/chainhash"
+	"github.com/wakiyamap/monad/txscript"
+	"github.com/wakiyamap/monad/wire"
+	"github.com/wakiyamap/monautil"
+	"github.com/wakiyamap/monawallet/waddrmgr"
+	base "github.com/wakiyamap/monawallet/wallet"
+	"github.com/wakiyamap/monawallet/walletdb"
 	"github.com/go-errors/errors"
 	"github.com/wakiyamap/lnd/input"
 	"github.com/wakiyamap/lnd/keychain"
@@ -121,8 +121,8 @@ func (b *BtcWallet) fetchPrivKey(keyDesc *keychain.KeyDescriptor) (*btcec.Privat
 		return key, nil
 	}
 
-	hash160 := btcutil.Hash160(keyDesc.PubKey.SerializeCompressed())
-	addr, err := btcutil.NewAddressWitnessPubKeyHash(hash160, b.netParams)
+	hash160 := monautil.Hash160(keyDesc.PubKey.SerializeCompressed())
+	addr, err := monautil.NewAddressWitnessPubKeyHash(hash160, b.netParams)
 	if err != nil {
 		return nil, err
 	}
@@ -223,13 +223,13 @@ func (b *BtcWallet) ComputeInputScript(tx *wire.MsgTx,
 	// we'll need to attach a sigScript in addition to witness data.
 	case pka.AddrType() == waddrmgr.NestedWitnessPubKey:
 		pubKey := privKey.PubKey()
-		pubKeyHash := btcutil.Hash160(pubKey.SerializeCompressed())
+		pubKeyHash := monautil.Hash160(pubKey.SerializeCompressed())
 
 		// Next, we'll generate a valid sigScript that will allow us to
 		// spend the p2sh output. The sigScript will contain only a
 		// single push of the p2wkh witness program corresponding to
 		// the matching public key of this address.
-		p2wkhAddr, err := btcutil.NewAddressWitnessPubKeyHash(
+		p2wkhAddr, err := monautil.NewAddressWitnessPubKeyHash(
 			pubKeyHash, b.netParams,
 		)
 		if err != nil {
